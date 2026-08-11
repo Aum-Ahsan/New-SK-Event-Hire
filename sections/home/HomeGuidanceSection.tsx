@@ -9,16 +9,17 @@ export function HomeGuidanceSection() {
         <div className="eyebrow">{guidance.eyebrow}</div>
         <h2>{guidance.title}</h2>
         <p>{guidance.description}</p>
-        <div className="guidance-points">
-          {guidance.points.map((pt, i) => (
-            <span key={i}>
-              <b>✓</b> {pt}
-            </span>
-          ))}
-        </div>
-        <div className="guidance-actions">
+        {guidance.points && guidance.points.length > 0 && (
+          <div className="guidance-points">
+            {guidance.points.map((pt, i) => (
+              <span key={i}>
+                <b>✓</b> {pt}
+              </span>
+            ))}
+          </div>
+        )}
+        <div className="guidance-actions" style={{ marginTop: "24px" }}>
           <a href={guidance.teamLink.href}>{guidance.teamLink.text}</a>
-          <a href={guidance.briefLink.href}>{guidance.briefLink.text}</a>
         </div>
       </div>
       <img src={guidance.image} alt={guidance.imageAlt} />

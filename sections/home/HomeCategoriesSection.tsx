@@ -1,10 +1,19 @@
 import React from "react";
 import homeData from "@/data/pages/home.json";
-import { categories } from "@/components/common/CategoryCards";
 
 export function HomeCategoriesSection() {
-  const { categoriesHeading } = homeData;
-  const startCards = categories.slice(0, 8);
+  const { categoriesHeading, categoriesList } = homeData as any;
+  const items = categoriesList || [
+    { name: "Chairs & Seating", image: "/images/chairs-product.png", href: "/products" },
+    { name: "Tables", image: "/images/tables-product.png", href: "/products" },
+    { name: "Marquees & Tents", image: "/images/marquee-product.png", href: "/products" },
+    { name: "Heating & Cooling", image: "/images/lighting-product.png", href: "/products" },
+    { name: "Lighting & Sound", image: "/images/lighting-product.png", href: "/products" },
+    { name: "Tableware & Linen", image: "/images/tableware-product.png", href: "/products" },
+    { name: "Catering Equipment", image: "/images/flooring-product.png", href: "/products" },
+    { name: "Décor & Games", image: "/images/decor-product.png", href: "/products" }
+  ];
+
   return (
     <section className="home-section warm">
       <div className="home-heading">
@@ -16,11 +25,11 @@ export function HomeCategoriesSection() {
         <a href={categoriesHeading.link.href}>{categoriesHeading.link.text}</a>
       </div>
       <div className="category-photo-grid">
-        {startCards.map((x) => (
-          <a href="/products" key={x[0]}>
-            <img src={x[2]} alt={x[0]} />
+        {items.map((x: any) => (
+          <a href={x.href} key={x.name}>
+            <img src={x.image} alt={x.name} />
             <span>
-              {x[0]} <b>→</b>
+              {x.name} <b>→</b>
             </span>
           </a>
         ))}

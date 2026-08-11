@@ -17,7 +17,6 @@ export function HomeProcessSection() {
             <i>{x[0]}</i>
             <h3>{x[1]}</h3>
             <p>{x[2]}</p>
-            <a href="/request-quote">Learn more →</a>
           </article>
         ))}
       </div>

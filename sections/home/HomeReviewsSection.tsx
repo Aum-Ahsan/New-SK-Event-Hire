@@ -21,7 +21,7 @@ export function HomeReviewsSection() {
           <small>{reviewsSummary.label}</small>
         </aside>
         <div className="review-slider">
-          {reviews.map((review, i) => (
+          {(reviews as any[]).map((review: any, i: number) => (
             <blockquote className={reviewIndex === i ? "active" : ""} key={review.name}>
               <header>
                 <i aria-hidden="true">{review.initials}</i>
