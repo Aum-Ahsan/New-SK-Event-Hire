@@ -1,4 +1,5 @@
 import React from "react";
+import productsData from "@/data/pages/products.json";
 import { eventTypes } from "@/components/common/CategoryCards";
 
 interface ProductsAvailabilityPlannerSectionProps {
@@ -32,12 +33,17 @@ export function ProductsAvailabilityPlannerSection({
   setAvailability,
   setPage,
 }: ProductsAvailabilityPlannerSectionProps) {
+  const { availabilityPlanner } = productsData as any;
+  const title = availabilityPlanner?.title || "See what is available for your event";
+  const subtitle = availabilityPlanner?.subtitle || "Set your dates, location and guest count to check relevant hire stock.";
+  const buttonText = availabilityPlanner?.buttonText || "Check availability";
+
   return (
     <section className="planning-search catalogue-planner">
       <div className="search-title">
         <div>
-          <b>See what’s available for your event</b>
-          <span>Set your dates, location and guest count to check relevant hire stock.</span>
+          <b>{title}</b>
+          <span>{subtitle}</span>
         </div>
         <small>{availability}</small>
       </div>
@@ -81,7 +87,7 @@ export function ProductsAvailabilityPlannerSection({
             )
           }
         >
-          Check availability
+          {buttonText}
         </button>
       </div>
     </section>

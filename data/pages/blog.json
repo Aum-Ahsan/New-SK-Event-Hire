@@ -15,5 +15,13 @@
     "ctaHref": "/blog-how-many-tables-and-chairs",
     "image": "/images/marquee-product.png",
     "imageAlt": "Round tables arranged inside a marquee"
+  },
+  "article": {
+    "backText": "← Back to planning guides",
+    "categoryTag": "EVENT PLANNING GUIDE",
+    "defaultTitle": "How Many Tables and Chairs Do I Need?",
+    "defaultSummary": "A practical guide to calculating event seating and table quantities without crowding the room.",
+    "metaText": "By SK Event Hire planning team · Updated 24 July 2026 · 8 minute read",
+    "quickRule": "Quick planning rule: Start with one chair per seated guest, then add only the furniture required by each distinct event zone."
   }
 }

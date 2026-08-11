@@ -1,4 +1,5 @@
 import React from "react";
+import paymentData from "@/data/pages/payment.json";
 
 interface PaymentNavSectionProps {
   step: number;

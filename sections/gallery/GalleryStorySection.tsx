@@ -1,21 +1,32 @@
 import React from "react";
+import galleryData from "@/data/pages/gallery.json";
 
 export function GalleryStorySection() {
+  const { story } = galleryData as any;
+  const backText = story?.backText || "← Back to gallery";
+  const heroTag = story?.heroTag || "THE FINAL RESULT";
+  const defaultTitle = story?.defaultTitle || "Weather-ready garden reception";
+  const defaultSubtitle = story?.defaultSubtitle || "Warm, welcoming and ready before the first guest arrived.";
+  const briefTag = story?.briefTag || "THE BRIEF";
+  const productsTag = story?.productsTag || "WHAT MADE IT WORK";
+  const lessonTag = story?.lessonTag || "WHY THIS LAYOUT WORKED";
+  const finalTag = story?.finalTag || "PLANNING YOUR EVENT?";
+
   return (
     <>
       <section className="case-banner event-result-hero">
         <img src="/images/hero-event.png" alt="Weather-ready garden reception" />
         <div>
-          <a href="/gallery">← Back to gallery</a>
-          <span>THE FINAL RESULT</span>
-          <h1>Weather-ready garden reception</h1>
-          <p>Warm, welcoming and ready before the first guest arrived.</p>
+          <a href="/gallery">{backText}</a>
+          <span>{heroTag}</span>
+          <h1>{defaultTitle}</h1>
+          <p>{defaultSubtitle}</p>
           <small>Richmond, Victoria · 80 guests · Full-service setup</small>
         </div>
       </section>
       <section className="editorial-section case-story">
         <div>
-          <span className="section-kicker">THE BRIEF</span>
+          <span className="section-kicker">{briefTag}</span>
           <h2>A warm outdoor celebration with a practical weather plan</h2>
           <p>
             The couple wanted an intimate garden atmosphere without risking comfort or logistics. The plan paired natural timber furniture with covered
@@ -40,7 +51,7 @@ export function GalleryStorySection() {
       </section>
       <section className="editorial-section case-products">
         <div>
-          <span className="section-kicker">WHAT MADE IT WORK</span>
+          <span className="section-kicker">{productsTag}</span>
           <h2>Products and services working as one plan</h2>
           {[
             ["Natural Bentwood Chairs", "80 × dining chairs", "$352"],
@@ -82,7 +93,7 @@ export function GalleryStorySection() {
           <img src="/images/decor-product.png" alt="Styled table and garden details" />
         </div>
         <div>
-          <span className="section-kicker">WHY THIS LAYOUT WORKED</span>
+          <span className="section-kicker">{lessonTag}</span>
           <h2>A clear layout, covered dining and an organised setup sequence</h2>
           <p>One circulation route kept service practical while the lighting layers made the garden feel intimate after dark.</p>
           <blockquote style={{ border: "none" }}>Practical takeaway: build the weather plan into the layout from the beginning.</blockquote>
@@ -92,7 +103,7 @@ export function GalleryStorySection() {
       <section className="case-final">
         <img src="/images/hero-event.png" alt="Garden event" />
         <div>
-          <span>PLANNING YOUR EVENT?</span>
+          <span>{finalTag}</span>
           <h2>Use this event as a practical starting point.</h2>
           <p>Tell us what you liked and we’ll adapt the products, quantities and logistics for your venue.</p>
           <a href="/request-quote">Build a similar event</a>

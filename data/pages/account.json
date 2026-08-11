@@ -2,5 +2,62 @@
   "overview": {
     "recentActivityTitle": "Recent activity",
     "recentActivitySubtitle": "What changed"
+  },
+  "hero": {
+    "active": "Account",
+    "eyebrow": "Welcome back",
+    "title": "Account Overview",
+    "text": "Manage your bookings, quotes, rewards, and account settings."
+  },
+  "activityPanel": {
+    "eyebrow": "Recent activity",
+    "title": "What changed",
+    "viewAllText": "View all activity →",
+    "activities": [
+      {
+        "time": "Today · 9:10am",
+        "title": "Warehouse preparation scheduled",
+        "subtitle": "Booking SK-261114-042"
+      },
+      {
+        "time": "Yesterday · 4:32pm",
+        "title": "Quotation ready to review",
+        "subtitle": "Q-260724-084"
+      },
+      {
+        "time": "18 July · 2:43pm",
+        "title": "Deposit received",
+        "subtitle": ",280.00 · Visa ending 4821"
+      },
+      {
+        "time": "16 July · 11:08am",
+        "title": "Reward cashback pending",
+        "subtitle": ".40 after completion"
+      }
+    ]
+  },
+  "cardGrid": {
+    "cards": [
+      {
+        "tag": "Next delivery",
+        "title": "Garden wedding",
+        "detail": "14 Nov 2026"
+      },
+      {
+        "tag": "Active quotation",
+        "title": "Marquee & Seating",
+        "detail": ",450.00"
+      },
+      {
+        "tag": "Saved items",
+        "title": "Festoon Lights x4",
+        "detail": "In basket"
+      },
+      {
+        "tag": "Account rewards",
+        "title": ".00 Credit",
+        "detail": "Available"
+      }
+    ]
   }
 }

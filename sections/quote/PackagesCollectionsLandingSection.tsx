@@ -1,4 +1,5 @@
 import React from "react";
+import quoteData from "@/data/pages/quote.json";
 
 const curatedPackages = [
   ["Backyard Celebration", "40 guests · outdoor", "$420", "/images/chairs-product.png"],

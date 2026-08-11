@@ -1,4 +1,5 @@
 import React from "react";
+import helpData from "@/data/pages/help.json";
 
 interface HelpTopicsSectionProps {
   helpTopics: readonly any[];

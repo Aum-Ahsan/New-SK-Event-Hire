@@ -1,4 +1,5 @@
 import React from "react";
+import basketData from "@/data/pages/basket.json";
 
 interface BasketNavSectionProps {
   step: number;

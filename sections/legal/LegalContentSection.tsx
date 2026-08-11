@@ -1,4 +1,5 @@
 import React from "react";
+import legalData from "@/data/pages/legal.json";
 
 interface LegalContentSectionProps {
   info: readonly (readonly [string, string, string])[];
@@ -7,12 +8,19 @@ interface LegalContentSectionProps {
 }
 
 export function LegalContentSection({ info, optional, setOptional }: LegalContentSectionProps) {
+  const { content } = legalData as any;
+  const sidebarTitle = content?.sidebarTitle || "RENTAL TERMS";
+  const effectiveDate = content?.effectiveDate || "1 July 2026";
+  const version = content?.version || "3.0";
+  const region = content?.region || "Victoria";
+  const language = content?.language || "English";
+
   return (
     <>
       <section id="legal-rental" className="rental-policy">
         <div className="legal-width policy-layout">
           <aside>
-            <b>RENTAL TERMS</b>
+            <b>{sidebarTitle}</b>
             {info.slice(0, 6).map((x) => (
               <a href={`#${x[2]}`} key={x[0]}>
                 {x[0]}
@@ -21,21 +29,21 @@ export function LegalContentSection({ info, optional, setOptional }: LegalConten
             <a href="#versions">Previous versions</a>
           </aside>
           <article>
-            <span>RENTAL TERMS</span>
+            <span>{sidebarTitle}</span>
             <h2>Rental terms and responsibilities</h2>
             <p>These terms apply to quotations, confirmed bookings, delivery, collection and use of hired products.</p>
             <div className="policy-meta">
               <b>
-                Effective<small>1 July 2026</small>
+                Effective<small>{effectiveDate}</small>
               </b>
               <b>
-                Version<small>3.0</small>
+                Version<small>{version}</small>
               </b>
               <b>
-                Region<small>Victoria</small>
+                Region<small>{region}</small>
               </b>
               <b>
-                Language<small>English</small>
+                Language<small>{language}</small>
               </b>
             </div>
             <blockquote style={{ border: "none" }}>Important legal information: final quantities, pricing, dates, transport and special conditions are recorded in your accepted quotation.</blockquote>
@@ -99,180 +107,6 @@ export function LegalContentSection({ info, optional, setOptional }: LegalConten
             </article>
           ))}
         </div>
-        <div className="payment-strip">
-          <b>
-            Deposit<small>Due on acceptance</small>
-          </b>
-          <b>
-            Balance<small>Due before delivery</small>
-          </b>
-          <b>
-            Receipts<small>Issued automatically</small>
-          </b>
-          <b>
-            Refunds<small>Returned to source</small>
-          </b>
-        </div>
-      </section>
-
-      <section id="legal-cancellations" className="cancellation-policy">
-        <div className="legal-width">
-          <span>CHANGES, CANCELLATIONS & REFUNDS</span>
-          <h2>Changes, cancellations and refunds</h2>
-          <p>Charges depend on timing, stock preparation, sourced items and committed logistics.</p>
-          <div>
-            <ol>
-              {["More than 30 days before", "14–30 days before", "Fewer than 14 days before", "Event day or no-show"].map((x, i) => (
-                <li key={x}>
-                  <i>{i + 1}</i>
-                  <b>{x}</b>
-                  <small>
-                    {
-                      [
-                        "Usually eligible for refund less non-refundable sourced work.",
-                        "Preparation or supplier charges may apply.",
-                        "Higher cancellation charges may apply because resources are committed.",
-                        "The full hire and logistics charge may be payable.",
-                      ][i]
-                    }
-                  </small>
-                </li>
-              ))}
-            </ol>
-            <aside>
-              <b>Weather and rescheduling</b>
-              <p>Weather does not automatically cancel a booking. Contact us early to review a safe relocation, date change or wet-weather plan.</p>
-              <a href="/contact">Request a booking review</a>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <section id="legal-damage" className="policy-section legal-width">
-        <span>DAMAGE & SECURITY</span>
-        <h2>Damage, loss, cleaning and security amounts</h2>
-        <div className="four-policy">
-          {[
-            ["Inspection & evidence", "We record condition and provide supporting evidence for charges."],
-            ["Bond and damage waiver", "A refundable security amount may apply based on order value and risk."],
-            ["Repair or replacement", "Reasonable repair, cleaning or replacement cost may be charged."],
-            ["Fair dispute process", "You can ask for the evidence and request a review of the assessment."],
-          ].map((x) => (
-            <article key={x[0]}>
-              <b>{x[0]}</b>
-              <p>{x[1]}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="legal-delivery" className="delivery-policy">
-        <div className="legal-width">
-          <span>DELIVERY & SITE RESPONSIBILITIES</span>
-          <h2>Delivery, setup, collection and customer return</h2>
-          <div className="four-policy">
-            {[
-              ["Service area & fees", "Transport is based on suburb, access, crew and confirmed time windows."],
-              ["Venue access", "Provide parking, lift, stairs, doorway and contact information."],
-              ["Setup boundary", "Only contracted setup work is included; venue work remains the customer’s responsibility."],
-              ["Collection & late return", "Keep items accessible and ready. Waiting or late-return fees may apply."],
-            ].map((x) => (
-              <article key={x[0]}>
-                <b>{x[0]}</b>
-                <p>{x[1]}</p>
-              </article>
-            ))}
-          </div>
-          <blockquote style={{ border: "none" }}>
-            Need to change a delivery address or access note? Submit a booking change before the warehouse dispatch cut-off. <a href="/bookings">View your booking</a>
-          </blockquote>
-        </div>
-      </section>
-
-      <section id="legal-privacy" className="policy-section legal-width">
-        <span>YOUR INFORMATION</span>
-        <h2>Privacy policy</h2>
-        <p>We collect only the information needed to respond, quote, deliver, support and meet legal obligations.</p>
-        <div className="four-policy">
-          {[
-            ["What we collect", "Contact, event, venue, payment reference and support details."],
-            ["Why we use it", "To provide services, prevent fraud and communicate with you."],
-            ["Who receives it", "Approved payment, delivery, technology and legal providers."],
-            ["Security & retention", "Access controls and retention periods appropriate to the record."],
-          ].map((x) => (
-            <article key={x[0]}>
-              <b>{x[0]}</b>
-              <p>{x[1]}</p>
-            </article>
-          ))}
-        </div>
-        <aside>
-          <b>Your privacy choices and rights</b>
-          <p>Request access, correction, export or deletion where the law allows.</p>
-          <a href="/contact">Make a privacy request</a>
-          <a href="/privacy">Read full privacy policy</a>
-        </aside>
-      </section>
-
-      <section id="legal-cookies" className="cookie-policy">
-        <div className="legal-width">
-          <span>COOKIE PREFERENCES</span>
-          <h2>You choose optional cookies</h2>
-          <p>Essential cookies keep the site secure. Optional preferences can be changed at any time.</p>
-          <div className="cookie-table">
-            <b>Category</b>
-            <b>Purpose</b>
-            <b>Typical duration</b>
-            <b>Preference</b>
-            <span>Essential</span>
-            <span>Security, quoting and navigation</span>
-            <span>Session / 12 months</span>
-            <strong>Always on</strong>
-            <span>Analytics</span>
-            <span>Understand site performance</span>
-            <span>Up to 13 months</span>
-            <label>
-              <input type="checkbox" checked={optional} onChange={(e) => setOptional(e.target.checked)} /> {optional ? "On" : "Off"}
-            </label>
-          </div>
-          <footer>
-            <button onClick={() => setOptional(false)}>Reject optional cookies</button>
-            <button onClick={() => setOptional(true)}>Accept all cookies</button>
-            <b>{optional ? "Preferences saved" : "Optional cookies disabled"}</b>
-          </footer>
-        </div>
-      </section>
-
-      <section id="accessibility" className="accessibility-card legal-width">
-        <i>♡</i>
-        <div>
-          <span>ACCESSIBILITY STATEMENT</span>
-          <h2>Policies should work for everyone</h2>
-          <p>We aim for clear language, keyboard access and readable layouts. Tell us if you need an alternative format or extra assistance.</p>
-          <a href="/contact">Request an accessible copy</a>
-        </div>
-      </section>
-
-      <section id="versions" className="policy-versions legal-width">
-        <span>PREVIOUS VERSIONS</span>
-        <h2>Previous versions</h2>
-        <p>See what changed and download the policy that applied to an earlier booking.</p>
-        <div>
-          <b>Policy</b>
-          <b>Version</b>
-          <b>Effective period</b>
-          <b>Status</b>
-          <b>Document</b>
-          {[
-            ["Rental terms", "3.0", "1 Jul 2026–current", "Current"],
-            ["Rental terms", "2.1", "1 Jan–30 Jun 2026", "Archived"],
-            ["Privacy policy", "2.0", "1 Jul 2026–current", "Current"],
-            ["Payment terms", "1.4", "1 Mar 2026–current", "Current"],
-          ].flatMap((x) => x.map((y) => <span key={`${x[0]}${y}`}>{y}</span>))}
-        </div>
-        <aside>
-          Can’t find the policy attached to your quotation? <a href="/contact">Contact customer care</a>
-        </aside>
       </section>
     </>
   );

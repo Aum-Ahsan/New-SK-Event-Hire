@@ -1,4 +1,5 @@
 import React from "react";
+import collectionsData from "@/data/pages/collections.json";
 
 interface CollectionsGridSectionProps {
   cards: [string, string, string, string][];
@@ -7,6 +8,12 @@ interface CollectionsGridSectionProps {
 }
 
 export function CollectionsGridSection({ cards, type, hireProducts }: CollectionsGridSectionProps) {
+  const { grid } = collectionsData as any;
+  const exploreText = grid?.exploreText || "Explore collection";
+  const viewText = grid?.viewText || "View collection →";
+  const weddingEyebrow = grid?.weddingEyebrow || "Wedding favourites";
+  const weddingTitle = grid?.weddingTitle || "Build a coordinated look";
+
   return (
     <>
       <section className="public-section">
@@ -15,10 +22,10 @@ export function CollectionsGridSection({ cards, type, hireProducts }: Collection
             <a href={c[3]} key={c[0]}>
               <img src={c[2]} alt={c[0]} />
               <span>
-                <small>Explore collection</small>
+                <small>{exploreText}</small>
                 <h2>{c[0]}</h2>
                 <p>{c[1]}</p>
-                <b>View collection →</b>
+                <b>{viewText}</b>
               </span>
             </a>
           ))}
@@ -28,8 +35,8 @@ export function CollectionsGridSection({ cards, type, hireProducts }: Collection
         <section className="catalogue-section">
           <div className="section-intro">
             <div>
-              <div className="eyebrow">Wedding favourites</div>
-              <h2>Build a coordinated look</h2>
+              <div className="eyebrow">{weddingEyebrow}</div>
+              <h2>{weddingTitle}</h2>
             </div>
           </div>
           <div className="product-list-grid">

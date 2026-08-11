@@ -1,0 +1,27 @@
+{
+  "breadcrumbs": {
+    "root": "Products",
+    "seating": "Seating"
+  },
+  "main": {
+    "assuranceText": "Product preview updates with colour, size and cushion",
+    "popularTag": "POPULAR",
+    "availableTag": "AVAILABLE FOR YOUR DATES",
+    "ratingText": "4.9 (142) · Write a review",
+    "colourTitle": "Product colour"
+  },
+  "tabs": {
+    "specsTitle": "Specifications & Dimensions",
+    "setupTitle": "Delivery, Setup & Care",
+    "reviewsTitle": "Customer Reviews"
+  },
+  "content": {
+    "helpEyebrow": "Need assistance?",
+    "helpTitle": "Questions about this item?"
+  },
+  "related": {
+    "eyebrow": "FREQUENTLY HIRED TOGETHER",
+    "title": "Complete the look",
+    "viewAllText": "View all products →"
+  }
+}

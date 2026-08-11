@@ -1,0 +1,33 @@
+{
+  "hero": {
+    "eyebrow": "Melbourne event hire",
+    "title": "Event Services & Hire Range",
+    "text": "Browse quality hire items and planning assistance for your event across Melbourne.",
+    "image": "/images/hero-event.png",
+    "primaryCta": "Request a quote",
+    "secondaryCta": "Talk to the team"
+  },
+  "featureGrid": {
+    "askText": "Ask about this →",
+    "items": [
+      [
+        "Professional Delivery & Setup",
+        "On-time arrival and placement by experienced crew."
+      ],
+      [
+        "Clean & Maintained Stock",
+        "Inspected and sanitized before every hire."
+      ],
+      [
+        "Flexible Rental Duration",
+        "Single day, multi-day, or long term rental options."
+      ]
+    ]
+  },
+  "cta": {
+    "eyebrow": "Build your event brief",
+    "title": "Ready to check products, dates and logistics?",
+    "buttonText": "Start a quotation request",
+    "buttonHref": "/request-quote"
+  }
+}

@@ -1,10 +1,15 @@
 import React from "react";
+import productDetailData from "@/data/pages/product-detail.json";
 
 interface ProductDetailContentSectionProps {
   p: any;
 }
 
 export function ProductDetailContentSection({ p }: ProductDetailContentSectionProps) {
+  const { content } = productDetailData as any;
+  const helpEyebrow = content?.helpEyebrow || "Need assistance?";
+  const helpTitle = content?.helpTitle || "Questions about this item?";
+
   return (
     <section className="detail-content" id="overview">
       <div className="eyebrow">Product details</div>

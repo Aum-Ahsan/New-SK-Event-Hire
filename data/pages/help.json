@@ -5,5 +5,13 @@
     "description": "Search common questions, browse topics or contact our event hire team.",
     "placeholder": "Search help articles, policies or bookings",
     "popular": "Popular: delivery · deposits · returns · cancellations"
+  },
+  "search": {
+    "title": "How can we help?",
+    "placeholder": "Search help articles or topics..."
+  },
+  "topics": {
+    "kicker": "HELP TOPICS",
+    "title": "Browse by category"
   }
 }

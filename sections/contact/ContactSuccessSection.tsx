@@ -1,4 +1,5 @@
 import React from "react";
+import contactData from "@/data/pages/contact.json";
 
 export function ContactSuccessSection({ setSent }: { setSent: (val: boolean) => void }) {
   return (

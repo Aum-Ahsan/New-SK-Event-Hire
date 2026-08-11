@@ -15,7 +15,7 @@
   "categoryRail": {
     "eyebrow": "Browse your way",
     "title": "Browse by subcategory",
-    "hint": "Click and drag to browse",
+    "dragText": "Click and drag to browse",
     "viewAllText": "View all categories"
   },
   "search": {
@@ -43,7 +43,23 @@
     "eyebrow": "NEED A COMPLETE EVENT PACKAGE?",
     "title": "Let’s make planning easier.",
     "description": "Tell us your guest count, venue and date. We’ll recommend products that work together.",
-    "primaryCta": { "text": "Get a tailored quote", "href": "/request-quote" },
-    "secondaryCta": { "text": "Talk to our team", "href": "/contact" }
+    "primaryCta": {
+      "text": "Get a tailored quote",
+      "href": "/request-quote"
+    },
+    "secondaryCta": {
+      "text": "Talk to our team",
+      "href": "/contact"
+    }
+  },
+  "availabilityPlanner": {
+    "title": "See what is available for your event",
+    "subtitle": "Set your dates, location and guest count to check relevant hire stock.",
+    "buttonText": "Check availability"
+  },
+  "searchHeader": {
+    "placeholder": "Search Tiffany chair, heater or 6m marquee",
+    "buttonText": "Search",
+    "sortLabel": "Sort by"
   }
 }

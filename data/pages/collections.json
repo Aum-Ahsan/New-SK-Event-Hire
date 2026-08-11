@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "eyebrow": "Curated event collections",
+    "title": "Collections",
+    "description": "Browse coordinated products and editable packages selected around the type of event you are planning.",
+    "typeDescription": "Build a coordinated wedding from ceremony seating to reception dining, lighting and late-night lounge areas."
+  },
+  "grid": {
+    "exploreText": "Explore collection",
+    "viewText": "View collection →",
+    "weddingEyebrow": "Wedding favourites",
+    "weddingTitle": "Build a coordinated look"
+  }
+}

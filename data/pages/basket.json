@@ -5,13 +5,35 @@
     "description": "Confirm your dates, venue, delivery and payment preference. We’ll verify stock and logistics before the booking becomes final.",
     "asideTitle": "Saved securely",
     "asideDescription": "Your progress is protected on this device.",
-    "privacyLink": { "text": "Read our privacy policy →", "href": "/privacy" }
+    "privacyLink": {
+      "text": "Read our privacy policy →",
+      "href": "/privacy"
+    }
   },
   "help": {
     "eyebrow": "PLANNING SUPPORT",
     "title": "Need help before your event?",
     "description": "Talk to our event team about quantities, venue access, setup or schedule changes.",
-    "phone": { "text": "Call 03 9000 0000", "href": "tel:0390000000" },
-    "message": { "text": "Message our team", "href": "/contact" }
+    "phone": {
+      "text": "Call 03 9000 0000",
+      "href": "tel:0390000000"
+    },
+    "message": {
+      "text": "Message our team",
+      "href": "/contact"
+    }
+  },
+  "nav": {
+    "title": "Hire Basket",
+    "backText": "← Continue browsing products"
+  },
+  "main": {
+    "emptyTitle": "Your hire basket is empty",
+    "emptyText": "Browse our collection to add equipment to your event brief.",
+    "browseButton": "Browse hire products"
+  },
+  "outcome": {
+    "title": "Quotation Request Sent",
+    "subtitle": "We will check stock and logistics and get back to you shortly."
   }
 }

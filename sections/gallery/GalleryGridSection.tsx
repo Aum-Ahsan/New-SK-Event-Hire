@@ -1,4 +1,5 @@
 import React from "react";
+import galleryData from "@/data/pages/gallery.json";
 
 interface GalleryGridSectionProps {
   activeTag: string;
@@ -19,12 +20,16 @@ export function GalleryGridSection({
   setPreview,
   preview,
 }: GalleryGridSectionProps) {
+  const { grid } = galleryData as any;
+  const tags = grid?.tags || ["All", "Wedding", "Outdoor", "Warm lighting"];
+  const loadMoreText = grid?.loadMoreText || "Load more events";
+
   return (
     <>
       <section id="gallery-browser" className="gallery-browser gallery-listing-only">
         <div className="editorial-section">
           <div className="filter-pills gallery-chip-bar">
-            {["All", "Wedding", "Outdoor", "Warm lighting"].map((tag) => (
+            {tags.map((tag: string) => (
               <button
                 className={activeTag === tag ? "active" : ""}
                 onClick={() => {
@@ -64,7 +69,7 @@ export function GalleryGridSection({
           </div>
           {visible < shown.length && (
             <button className="load-more" onClick={() => setVisible(visible + 4)}>
-              Load more events
+              {loadMoreText}
             </button>
           )}
         </div>

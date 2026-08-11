@@ -6,5 +6,17 @@
     "ctaText": "Read rental terms →",
     "ctaHref": "#legal-rental",
     "effective": "✓ Current policies · Effective 1 July 2026"
+  },
+  "content": {
+    "sidebarTitle": "RENTAL TERMS",
+    "effectiveDate": "1 July 2026",
+    "version": "3.0",
+    "region": "Victoria",
+    "language": "English"
+  },
+  "directory": {
+    "kicker": "POLICY LIBRARY",
+    "title": "Find the information you need",
+    "subtitle": "Every policy is written to explain what you can expect and what we need from you."
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import authData from "@/data/pages/auth.json";
 
 function Field({ label, value, wide }: { label: string; value?: string; wide?: boolean }) {
   return (
@@ -11,20 +12,28 @@ function Field({ label, value, wide }: { label: string; value?: string; wide?: b
 
 interface AuthCardSectionProps {
   type: string;
-  d: [string, string, string];
+  d?: [string, string, string];
 }
 
 export function AuthCardSection({ type, d }: AuthCardSectionProps) {
+  const { card } = authData as any;
+  const backText = card?.backText || "← Back to website";
+  const signInEyebrow = card?.signInEyebrow || "Customer account";
+  const otpEyebrow = card?.otpEyebrow || "Secure verification";
+  const heading = d ? d[0] : (card?.defaultHeading || "Sign in to your account");
+  const subheading = d ? d[1] : (card?.defaultSubheading || "Access your bookings");
+  const description = d ? d[2] : (card?.defaultDescription || "Enter your email or phone number to receive a secure login code.");
+
   return (
     <main>
       <a className="back-home" href="/">
-        ← Back to website
+        {backText}
       </a>
       <section className="auth-card">
-        <div className="eyebrow">{type === "otp" ? "Secure verification" : "Customer account"}</div>
-        <h2>{d[0]}</h2>
-        <h3>{d[1]}</h3>
-        <p>{d[2]}</p>
+        <div className="eyebrow">{type === "otp" ? otpEyebrow : signInEyebrow}</div>
+        <h2>{heading}</h2>
+        <h3>{subheading}</h3>
+        <p>{description}</p>
         <div className="form-grid auth-form">
           {type === "otp" ? (
             <Field wide label="Verification code" value="2  8  4  1  7  5" />

@@ -1,4 +1,5 @@
 import React from "react";
+import productDetailData from "@/data/pages/product-detail.json";
 
 interface ProductDetailRelatedSectionProps {
   related: any[];

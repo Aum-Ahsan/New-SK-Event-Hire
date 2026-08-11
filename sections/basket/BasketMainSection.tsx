@@ -1,4 +1,5 @@
 import React from "react";
+import basketData from "@/data/pages/basket.json";
 
 function Field({ label, value, wide, area }: { label: string; value?: string; wide?: boolean; area?: boolean }) {
   return (

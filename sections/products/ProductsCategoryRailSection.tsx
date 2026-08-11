@@ -1,4 +1,5 @@
 import React from "react";
+import productsData from "@/data/pages/products.json";
 import { categories } from "@/components/common/CategoryCards";
 
 interface ProductsCategoryRailSectionProps {
@@ -14,20 +15,26 @@ export function ProductsCategoryRailSection({
   categoryRail,
   drag,
 }: ProductsCategoryRailSectionProps) {
+  const { categoryRail: railConfig } = productsData as any;
+  const eyebrow = railConfig?.eyebrow || "Browse your way";
+  const title = railConfig?.title || "Browse by subcategory";
+  const dragText = railConfig?.dragText || "Click and drag to browse";
+  const viewAllText = railConfig?.viewAllText || "View all categories";
+
   return (
     <section className="category-rail">
-      <div className="eyebrow">Browse your way</div>
+      <div className="eyebrow">{eyebrow}</div>
       <div className="rail-head">
-        <h2>Browse by subcategory</h2>
+        <h2>{title}</h2>
         <div className="rail-actions">
-          <span>Click and drag to browse</span>
+          <span>{dragText}</span>
           <button aria-label="Previous categories" onClick={() => categoryRail.current?.scrollBy({ left: -460, behavior: "smooth" })}>
             ←
           </button>
           <button aria-label="Next categories" onClick={() => categoryRail.current?.scrollBy({ left: 460, behavior: "smooth" })}>
             →
           </button>
-          <button onClick={() => setCategory("All")}>View all categories</button>
+          <button onClick={() => setCategory("All")}>{viewAllText}</button>
         </div>
       </div>
       <div

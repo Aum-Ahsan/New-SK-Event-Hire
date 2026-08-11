@@ -1,16 +1,20 @@
 import React from "react";
+import accountData from "@/data/pages/account.json";
 
 interface AccountCardGridSectionProps {
-  cards: [string, string, string][];
-  kind: string;
+  cards?: [string, string, string][];
+  kind?: string;
 }
 
 export function AccountCardGridSection({ cards, kind }: AccountCardGridSectionProps) {
+  const defaultCards = (accountData as any).cardGrid?.cards?.map((c: any) => [c.tag, c.title, c.detail]) || [];
+  const list = cards || defaultCards;
+
   return (
     <div className="account-card-grid">
-      {cards.map((x, i) => (
+      {list.map((x: any, i: number) => (
         <article className="card account-card" key={x[0]}>
-          <i>{["◇", "▦", "▤", "✦"][i]}</i>
+          <i>{["◇", "▦", "▤", "✦"][i % 4]}</i>
           <span>
             <small>{x[0]}</small>
             <b>{x[1]}</b>

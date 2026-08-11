@@ -1,4 +1,5 @@
 import React from "react";
+import quoteData from "@/data/pages/quote.json";
 
 function Info({ label, value }: { label: string; value: string }) {
   return (

@@ -23,7 +23,21 @@
       "description": "Review your products and tell us about your event. We’ll confirm availability, logistics and the final price before anything is booked.",
       "asideTitle": "Need help with quantities?",
       "asideDescription": "Our team can check your selection and venue requirements.",
-      "contactLink": { "text": "Talk to our event hire specialists →", "href": "/contact" }
+      "contactLink": {
+        "text": "Talk to our event hire specialists →",
+        "href": "/contact"
+      }
     }
+  },
+  "packagesCollectionsLanding": {
+    "heroTag": "CURATED EVENT HIRE",
+    "heroTitle": "Everything you need,\nbeautifully brought together.",
+    "heroDescription": "Start with a ready-made package, explore a coordinated collection or let our team tailor the right mix for your event.",
+    "plannerTag": "FIND YOUR STARTING POINT",
+    "plannerTitle": "What are you planning?",
+    "plannerDescription": "We will suggest a practical package, collection and service level for your event."
+  },
+  "quotationFlow": {
+    "crumbRoot": "Quotes"
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import packagesData from "@/data/pages/packages.json";
 
 interface PackagesGridSectionProps {
   eventPackages: any[];

@@ -7,5 +7,24 @@
     "ctaHref": "#gallery-browser",
     "image": "/images/hero-event.png",
     "imageAlt": "Warm outdoor wedding reception prepared by SK Event Hire"
+  },
+  "grid": {
+    "tags": [
+      "All",
+      "Wedding",
+      "Outdoor",
+      "Warm lighting"
+    ],
+    "loadMoreText": "Load more events"
+  },
+  "story": {
+    "backText": "← Back to gallery",
+    "heroTag": "THE FINAL RESULT",
+    "defaultTitle": "Weather-ready garden reception",
+    "defaultSubtitle": "Warm, welcoming and ready before the first guest arrived.",
+    "briefTag": "THE BRIEF",
+    "productsTag": "WHAT MADE IT WORK",
+    "lessonTag": "WHY THIS LAYOUT WORKED",
+    "finalTag": "PLANNING YOUR EVENT?"
   }
 }

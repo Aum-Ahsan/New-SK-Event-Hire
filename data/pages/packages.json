@@ -5,7 +5,10 @@
     "eyebrow": "Editable hire packages",
     "title": "Start complete. Make it yours.",
     "description": "Choose a guest-ready bundle, then adjust quantities, finishes, logistics and optional extras around your real venue.",
-    "cta": { "text": "Browse by event type", "href": "/collections" }
+    "cta": {
+      "text": "Browse by event type",
+      "href": "/collections"
+    }
   },
   "detail": {
     "description": "A curated starting point that stays fully editable. Change quantities, finishes or substitute products before availability and the final price are confirmed.",
@@ -13,5 +16,8 @@
     "inclusionsHeading": "Starting inclusions",
     "ctaText": "Customise this package",
     "ctaHref": "/request-quote"
+  },
+  "grid": {
+    "viewText": "View package details →"
   }
 }
