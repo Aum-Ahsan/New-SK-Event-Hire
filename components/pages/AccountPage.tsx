@@ -1,4 +1,7 @@
 import React from "react";
+import { AccountHeroSection } from "@/sections/account/AccountHeroSection";
+import { AccountCardGridSection } from "@/sections/account/AccountCardGridSection";
+import { AccountActivityPanelSection } from "@/sections/account/AccountActivityPanelSection";
 
 export const accountData: Record<string, { active: string; eyebrow: string; title: string; text: string; cards: [string, string, string][] }> = {
   overview: {
@@ -143,54 +146,9 @@ export function AccountOverview({ kind }: AccountOverviewProps) {
   const d = accountData[kind] || accountData.overview;
   return (
     <main>
-      <div className="crumb">
-        {d.active} <span>›</span> Overview
-      </div>
-      <section className="page-hero">
-        <div>
-          <div className="eyebrow">{d.eyebrow}</div>
-          <h1>{d.title}</h1>
-          <p>{d.text}</p>
-        </div>
-        <a className="primary account-action" href={kind === "quotes" ? "/create-quote-01" : "/contact"}>
-          {kind === "quotes" ? "Create new quotation" : "Get help"} →
-        </a>
-      </section>
-      <div className="account-card-grid">
-        {d.cards.map((x, i) => (
-          <article className="card account-card" key={x[0]}>
-            <i>{["◇", "▦", "▤", "✦"][i]}</i>
-            <span>
-              <small>{x[0]}</small>
-              <b>{x[1]}</b>
-              <em>{x[2]}</em>
-            </span>
-            <a href={kind === "quotes" && i === 0 ? "/quotation-details" : "#"}>Open →</a>
-          </article>
-        ))}
-      </div>
-      <section className="card account-panel">
-        <div className="section-head">
-          <div>
-            <div className="eyebrow">Recent activity</div>
-            <h2>What changed</h2>
-          </div>
-          <a href="#">View all activity →</a>
-        </div>
-        {[
-          ["Today · 9:10am", "Warehouse preparation scheduled", "Booking SK-261114-042"],
-          ["Yesterday · 4:32pm", "Quotation ready to review", "Q-260724-084"],
-          ["18 July · 2:43pm", "Deposit received", "$1,280.00 · Visa ending 4821"],
-          ["16 July · 11:08am", "Reward cashback pending", "$38.40 after completion"],
-        ].map((x) => (
-          <div className="activity-row" key={x[0]}>
-            <small>{x[0]}</small>
-            <b>{x[1]}</b>
-            <span>{x[2]}</span>
-            <a href="#">View</a>
-          </div>
-        ))}
-      </section>
+      <AccountHeroSection d={d} kind={kind} />
+      <AccountCardGridSection cards={d.cards} kind={kind} />
+      <AccountActivityPanelSection />
     </main>
   );
 }

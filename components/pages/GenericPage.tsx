@@ -1,6 +1,9 @@
 import React from "react";
 import { PublicHeader } from "@/components/common/PublicHeader";
 import { PublicFooter } from "@/components/common/PublicFooter";
+import { GenericHeroSection } from "@/sections/generic/GenericHeroSection";
+import { GenericFeatureGridSection } from "@/sections/generic/GenericFeatureGridSection";
+import { GenericCtaSection } from "@/sections/generic/GenericCtaSection";
 
 export const genericPages: Record<string, { eyebrow: string; title: string; text: string; image: string; items: [string, string][] }> = {
   packages: {
@@ -87,41 +90,9 @@ export function GenericPublicPage({ kind }: GenericPublicPageProps) {
     <div className="public-site">
       <PublicHeader />
       <main className="public-main">
-        <section className="image-hero">
-          <img src={p.image} alt={p.title} />
-          <div>
-            <div className="eyebrow">{p.eyebrow}</div>
-            <h1>{p.title}</h1>
-            <p>{p.text}</p>
-            <div className="hero-actions">
-              <a className="public-cta" href="/request-quote">
-                Request a quote
-              </a>
-              <a className="outline-cta" href="/contact">
-                Talk to the team
-              </a>
-            </div>
-          </div>
-        </section>
-        <section className="public-section">
-          <div className="feature-grid">
-            {p.items.map((x, i) => (
-              <article className="feature-card" key={x[0]}>
-                <i>{String(i + 1).padStart(2, "0")}</i>
-                <h3>{x[0]}</h3>
-                <p>{x[1]}</p>
-                <a href="/contact">Ask about this →</a>
-              </article>
-            ))}
-          </div>
-        </section>
-        <section className="final-cta compact">
-          <div className="eyebrow">Build your event brief</div>
-          <h2>Ready to check products, dates and logistics?</h2>
-          <a className="public-cta" href="/request-quote">
-            Start a quotation request
-          </a>
-        </section>
+        <GenericHeroSection p={p} />
+        <GenericFeatureGridSection items={p.items} />
+        <GenericCtaSection />
       </main>
       <PublicFooter />
     </div>
