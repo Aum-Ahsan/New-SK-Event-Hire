@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "image": "/images/hero-event.png",
+    "imageAlt": "A complete Melbourne event hire setup",
+    "eyebrow": "Product hire for every event",
+    "title": "Everything for your event, in one place.",
+    "description": "Browse beautifully prepared furniture, marquees, lighting, tableware and décor."
+  },
+  "planner": {
+    "title": "See what’s available for your event",
+    "subtitle": "Set your dates, location and guest count to check relevant hire stock.",
+    "defaultAvailability": "Set your dates, postcode and guest count, then check availability.",
+    "buttonText": "Check availability"
+  },
+  "categoryRail": {
+    "eyebrow": "Browse your way",
+    "title": "Browse by subcategory",
+    "hint": "Click and drag to browse",
+    "viewAllText": "View all categories"
+  },
+  "search": {
+    "placeholder": "Search “Tiffany chair”, “heater” or “6m marquee”",
+    "buttonText": "Search"
+  },
+  "filters": {
+    "eyebrow": "Refine products",
+    "title": "Narrow your results",
+    "clearAllText": "Clear all"
+  },
+  "advice": {
+    "image": "/images/lighting-product.png",
+    "imageAlt": "Outdoor event planning",
+    "eyebrow": "Helpful hire advice",
+    "title": "Plan with confidence",
+    "description": "Choose products for your guest count, venue access and weather. Our team can help with quantities, practical layouts and safe setup.",
+    "links": [
+      "How many chairs and tables do I need? →",
+      "Choosing the right marquee size →",
+      "Outdoor event heating checklist →"
+    ]
+  },
+  "cta": {
+    "eyebrow": "NEED A COMPLETE EVENT PACKAGE?",
+    "title": "Let’s make planning easier.",
+    "description": "Tell us your guest count, venue and date. We’ll recommend products that work together.",
+    "primaryCta": { "text": "Get a tailored quote", "href": "/request-quote" },
+    "secondaryCta": { "text": "Talk to our team", "href": "/contact" }
+  }
+}

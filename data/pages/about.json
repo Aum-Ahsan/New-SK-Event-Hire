@@ -1,0 +1,126 @@
+{
+  "hero": {
+    "eyebrow": "ABOUT SK EVENT HIRE",
+    "title": "Events feel easier with the right support.",
+    "description": "SK Event Hire provides quality event equipment and practical planning help for celebrations across Melbourne and Victoria.",
+    "primaryCta": { "text": "Request a quote →", "href": "/request-quote" },
+    "secondaryCta": { "text": "Explore hire products", "href": "/products" },
+    "badge": "✓ Local Melbourne delivery & collection",
+    "image": "/images/warehouse-team.png",
+    "imageAlt": "SK Event Hire team preparing event furniture",
+    "captionTitle": "Equipment prepared for real events",
+    "captionSubtitle": "Clean · Checked · Event-ready"
+  },
+  "story": {
+    "images": [
+      { "src": "/images/chairs-product.png", "alt": "Chair quality preparation" },
+      { "src": "/images/hero-event.png", "alt": "Completed outdoor event" }
+    ],
+    "badge": "OUR STORY",
+    "title": "How SK Event Hire began",
+    "paragraphs": [
+      "SK Event Hire was created to make event hire clearer, calmer and more dependable. We combine a carefully maintained product range with practical advice, local knowledge and reliable logistics.",
+      "Our role is simple: help customers choose confidently, prepare every item properly and make delivery, setup and collection easier to understand."
+    ],
+    "quote": "“Hire should feel organised.”",
+    "quoteSmall": "Clear advice, honest communication and equipment that arrives ready."
+  },
+  "promise": {
+    "eyebrow": "OUR SERVICE PROMISE",
+    "title": "What customers can expect",
+    "description": "Simple standards guide every product, quotation and event.",
+    "standards": [
+      ["Clean, event-ready equipment", "Every piece is washed, inspected and packed for the event."],
+      ["Clear communication", "Practical updates from quotation to final collection."],
+      ["Reliable timing", "Delivery and collection windows planned around your venue."],
+      ["Transparent quotes", "Itemised products, labour, transport and optional extras."],
+      ["Respectful service", "Friendly people who care for your venue and occasion."]
+    ]
+  },
+  "process": {
+    "eyebrow": "HOW WE HELP",
+    "title": "The way we work",
+    "description": "Clear steps from your first idea to final collection.",
+    "steps": [
+      ["01", "Helpful", "Advice based on venue, guests and event style."],
+      ["02", "Dependable", "Confirmed timing and practical communication."],
+      ["03", "Careful", "Quality checks before every dispatch."],
+      ["04", "Inclusive", "Flexible options for different events and budgets."],
+      ["05", "Straightforward", "Clear quotes, choices and next steps."]
+    ]
+  },
+  "prepared": {
+    "eyebrow": "QUALITY & CHECKING",
+    "title": "Prepared for every booking",
+    "image": "/images/chairs-product.png",
+    "imageAlt": "Team preparing chairs",
+    "items": [
+      ["Inspect", "Condition check"],
+      ["Clean", "Commercial clean"],
+      ["Count", "Quantities confirmed"],
+      ["Pack", "Protected for transport"],
+      ["Deliver & set up", "Handled by event crew"],
+      ["Return inspection", "Recorded after hire"],
+      ["Maintain", "Repair-first approach"]
+    ]
+  },
+  "venues": {
+    "eyebrow": "VENUES & EVENTS",
+    "title": "Practical planning for real venues",
+    "description": "Every venue has its own access, surfaces, timing and weather considerations. We plan the details before event day.",
+    "items": [
+      ["Site and access review", "Parking, stairs, paths and loading."],
+      ["Product information", "Dimensions, capacity and setup needs."],
+      ["Setup process", "Placement and service windows."],
+      ["Weather decisions", "Cover, anchoring, heat and wind."]
+    ],
+    "quote": "✓ We document important venue and setup details in your quotation.",
+    "image": "/images/hero-event.png",
+    "imageAlt": "Outdoor marquee event setup"
+  },
+  "team": {
+    "eyebrow": "THE PEOPLE BEHIND THE EVENTS",
+    "title": "Meet the people behind your event",
+    "description": "One connected team plans, prepares and delivers your hire.",
+    "roles": [
+      ["Event planning & customer care", "Advice, products and clear quotations.", "/images/tableware-product.png"],
+      ["Warehouse & quality preparation", "Cleaning, checking, counting and packing.", "/images/warehouse-team.png"],
+      ["Delivery & event setup", "Careful transport, placement and collection.", "/images/marquee-product.png"]
+    ],
+    "note": "✓ Clear ownership from enquiry to collection, with one connected event record."
+  },
+  "localKnowledge": {
+    "eyebrow": "WHERE WE WORK",
+    "title": "Local knowledge across Melbourne",
+    "description": "Our delivery planning is shaped by Melbourne venues, access conditions and real travel times.",
+    "points": [
+      { "title": "Melbourne metro coverage", "subtitle": "Inner and greater Melbourne delivery." },
+      { "title": "Pickup by appointment", "subtitle": "Eligible products from our warehouse." },
+      { "title": "Venue-aware logistics", "subtitle": "Access, surfaces and timing checked early." }
+    ],
+    "link": { "text": "Check your suburb →", "href": "/contact#delivery-area" }
+  },
+  "responsibility": {
+    "eyebrow": "OUR RESPONSIBILITY",
+    "title": "Hire, reuse and care",
+    "description": "Reusable event equipment works best when it is selected thoughtfully, maintained carefully and transported responsibly.",
+    "items": [
+      ["Care and maintenance", "Cleaned, checked and repaired."],
+      ["Protective transport", "Packed to reduce marks and damage."],
+      ["Repair-first approach", "Maintain before replacing."],
+      ["End-of-service review", "Responsible reuse and disposal."]
+    ],
+    "quote": "Better preparation supports longer product life and more reliable events.",
+    "image": "/images/warehouse-team.png",
+    "imageAlt": "Equipment being loaded carefully for delivery"
+  },
+  "final": {
+    "image": "/images/tableware-product.png",
+    "imageAlt": "Event consultation and floor plan",
+    "eyebrow": "LET'S PLAN WITH PRACTICAL DETAIL",
+    "title": "Tell us what you’re planning.",
+    "description": "Share your date, location, guest count and priorities. We’ll help you build a clear hire plan.",
+    "primaryCta": { "text": "Request a quote →", "href": "/request-quote" },
+    "secondaryCta": { "text": "Meet with a planner", "href": "/planning" }
+  }
+}

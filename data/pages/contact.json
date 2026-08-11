@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "eyebrow": "CONTACT & SERVICE AREA",
+    "title": "Let’s plan your event",
+    "description": "Tell us what you’re planning and we’ll help with products, quantities, timing and logistics.",
+    "primaryCta": { "text": "Send an enquiry →", "href": "#contact-form" },
+    "secondaryCta": { "text": "Check your area", "href": "tel:0390000000" },
+    "badge": "✓ Friendly Melbourne event hire support",
+    "image": "/images/tableware-product.png",
+    "imageAlt": "Event planner speaking with a customer"
+  },
+  "optionsHeading": {
+    "eyebrow": "CHOOSE HOW TO START",
+    "title": "How would you like to get in touch?"
+  },
+  "options": [
+    ["CALL US", "Prefer to talk?", "03 9000 0000", "tel:0390000000"],
+    ["EMAIL US", "Send the details", "hello@skeventhire.com.au", "mailto:hello@skeventhire.com.au"],
+    ["VISIT OR COLLECT", "By appointment", "Keilor Park, Melbourne", "#location"],
+    ["SERVICE AREA", "Plan your event", "Check postcode & delivery", "#delivery-area"]
+  ],
+  "formHeader": {
+    "eyebrow": "EVENT ENQUIRY",
+    "title": "Tell us what you know",
+    "description": "Required fields are marked with *. We validate your contact, event, address and service details before submission."
+  },
+  "deliveryCoverage": {
+    "eyebrow": "DELIVERY COVERAGE",
+    "title": "Do we deliver to your event?",
+    "description": "Enter your suburb or postcode. Final transport pricing depends on access, crew and timing.",
+    "results": [
+      { "type": "green", "title": "✓ Yes, we deliver to Richmond 3121.", "subtitle": "Standard metropolitan delivery quotation available." },
+      { "type": "yellow", "title": "Outer Melbourne", "subtitle": "We may deliver to Mornington 3931. Event-specific quotation required." },
+      { "type": "default", "title": "Outside our regular delivery area", "subtitle": "Contact us to discuss regional Victoria logistics." }
+    ]
+  },
+  "location": {
+    "eyebrow": "VISIT US IN MELBOURNE",
+    "title": "Find us and plan your collection",
+    "cardTitle": "SK Event Hire collection point",
+    "cardSubtitle": "Keilor Park VIC 3042 · Appointment required",
+    "steps": [
+      ["1", "Confirm collection"],
+      ["2", "Parking and arrival"],
+      ["3", "Loading and vehicle suitability"],
+      ["4", "After-hours support"]
+    ],
+    "link": { "text": "Book a collection →", "href": "/request-quote" }
+  },
+  "hours": {
+    "eyebrow": "OPENING HOURS",
+    "title": "Trading and collection hours",
+    "description": "Collection and return appointments are confirmed with your booking.",
+    "list": [
+      { "term": "Monday–Friday", "details": "9:00am–4:00pm" },
+      { "term": "Saturday", "details": "By confirmed appointment" },
+      { "term": "Sunday", "details": "Closed unless event support is contracted" },
+      { "term": "Public holidays and special events", "details": "Times vary and are confirmed in advance." }
+    ]
+  },
+  "faq": {
+    "eyebrow": "BEFORE YOU CONTACT US",
+    "title": "Frequently asked questions",
+    "items": [
+      "How far in advance should I enquire?",
+      "Can I collect my order?",
+      "Is there a minimum hire?",
+      "How much should I budget?",
+      "What is the service area delivery cost?",
+      "What if my venue is regional?"
+    ],
+    "answer": "Contact us as soon as your date is known. Availability, access, crew and transport are confirmed in your quotation."
+  },
+  "bottom": {
+    "eyebrow": "STILL NOT SURE?",
+    "title": "Not sure what you need?",
+    "description": "Send a simple message and our team will recommend the next step.",
+    "links": [
+      { "text": "Send a simple email", "href": "mailto:hello@skeventhire.com.au" },
+      { "text": "Call our team", "href": "tel:0390000000" }
+    ]
+  }
+}

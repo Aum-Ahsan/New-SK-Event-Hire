@@ -1,0 +1,29 @@
+{
+  "publicQuote": {
+    "done": {
+      "eyebrow": "Quotation request QR-260731-184",
+      "title": "Your request is with our event team.",
+      "description": "We will check date-range stock, logistics and pricing before sending a versioned quotation. Nothing has been reserved and no payment has been taken.",
+      "responseTarget": "Within 1 business day",
+      "eventDate": "14 November 2026",
+      "contact": "Email and SMS",
+      "ctaText": "Return to homepage",
+      "ctaHref": "/"
+    },
+    "form": {
+      "eyebrow": "Public quotation request",
+      "title": "Tell us what the event needs.",
+      "description": "A clear, no-payment request covering products, timing, venue access and fulfilment."
+    }
+  },
+  "quoteJourney": {
+    "hero": {
+      "eyebrow": "NO PAYMENT REQUIRED",
+      "title": "Request your event hire quote",
+      "description": "Review your products and tell us about your event. We’ll confirm availability, logistics and the final price before anything is booked.",
+      "asideTitle": "Need help with quantities?",
+      "asideDescription": "Our team can check your selection and venue requirements.",
+      "contactLink": { "text": "Talk to our event hire specialists →", "href": "/contact" }
+    }
+  }
+}

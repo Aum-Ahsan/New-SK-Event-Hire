@@ -1,0 +1,6 @@
+import React from "react";
+
+export function PublicHeader({ active = "" }: { active?: string }) {
+  const links = [["Home","/"],["Hire Products","/products"],["Event Planning","/planning"],["Packages","/packages"],["Gallery","/gallery"],["About","/about"],["Blog","/blog"],["Contact","/contact"]];
+  return <><div className="announcement">Melbourne event hire · Friendly local support <span>Call 03 9000 0000 · Get help</span></div><header className="public-header"><a className="public-brand" href="/"><span>SK</span><b>EVENT HIRE<small>EVERYTHING FOR YOUR EVENT</small></b></a><nav>{links.map(x=><a className={x[0]===active?"nav-active":""} aria-current={x[0]===active?"page":undefined} href={x[1]} key={x[0]}>{x[0]}</a>)}</nav><div><a className="icon-link" href="/search" aria-label="Search">⌕</a><a className="icon-link" href="/basket" aria-label="Basket">Bag <sup>3</sup></a><details className="mobile-menu"><summary aria-label="Open navigation">☰</summary><div>{links.map(x=><a className={x[0]===active?"nav-active":""} href={x[1]} key={x[0]}>{x[0]}</a>)}<a href="/compare">Compare products</a><a href="/collections">Event collections</a><a href="/sign-in">Customer sign in</a></div></details></div></header></>;
+}

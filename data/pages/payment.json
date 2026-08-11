@@ -1,0 +1,17 @@
+{
+  "intro": {
+    "eyebrow": "SECURE BOOKING PAYMENT",
+    "title": "Complete your booking payment",
+    "description": "Choose a payment method, verify the authorised payer and review the amount before confirming. Your booking is protected against duplicate charges.",
+    "asideTitle": "▣ Secure checkout",
+    "asideDescription": "Payment information is encrypted and never displayed in full.",
+    "helpLink": { "text": "Payment help →", "href": "/payment-policy" }
+  },
+  "help": {
+    "eyebrow": "PAYMENT SUPPORT",
+    "title": "Need help with a transaction?",
+    "description": "Contact us with your booking and payment reference. Never send full card details by email.",
+    "phone": { "text": "Call 03 9000 0000", "href": "tel:0390000000" },
+    "support": { "text": "Payment support", "href": "/contact" }
+  }
+}

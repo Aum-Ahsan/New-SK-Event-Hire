@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "eyebrow": "Product comparison",
+    "title": "Compare the details that matter.",
+    "description": "Review up to four products side by side, then open a product to select dates, variant and quantity."
+  },
+  "actions": {
+    "addReplaceText": "＋ Add or replace product",
+    "addReplaceHref": "/products",
+    "requestQuoteText": "Request quote for selected items",
+    "requestQuoteHref": "/request-quote"
+  }
+}

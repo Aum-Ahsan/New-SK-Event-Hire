@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "image": "/images/warehouse-team.png",
+    "imageAlt": "Event planner preparing a customer plan",
+    "eyebrow": "EVENT PLANNING & CONSULTATION",
+    "title": "Your event,\nthoughtfully planned.",
+    "description": "From product choices and quantities to delivery, setup and event-day details, our Melbourne team helps turn your ideas into one practical plan.",
+    "primaryCta": { "text": "Contact our planning team", "href": "/contact" },
+    "secondaryCta": { "text": "Request a quote", "href": "/request-quote" },
+    "badge": "FROM $120 · CLEAR SCOPE BEFORE YOU COMMIT"
+  },
+  "supportChoice": {
+    "eyebrow": "CHOOSE YOUR SUPPORT",
+    "title": "Choose the support you need",
+    "description": "Start with one area or select a complete plan. We’ll confirm scope and timing before work begins.",
+    "options": [
+      ["Equipment advice", "Products, quantities and practical alternatives."],
+      ["Styling direction", "A coordinated visual direction for furniture, linen and décor."],
+      ["Venue & logistics", "Access, delivery, setup, pack-down and weather planning."],
+      ["On-site coordination", "A clear supplier and event-day handover plan."],
+      ["Full event plan", "One connected plan from the first conversation to event day."]
+    ]
+  },
+  "eventsHelp": {
+    "eyebrow": "EVENTS WE SUPPORT",
+    "title": "Events we can help with",
+    "description": "Every plan is shaped around the venue, guest experience, timing and practical requirements.",
+    "list": [
+      ["Weddings", "Ceremony, dining, lighting and weather-ready reception planning.", "/images/marquee-product.png"],
+      ["Private celebrations", "Birthdays, anniversaries and intimate milestone events.", "/images/decor-product.png"],
+      ["Long-table dinners", "Practical layouts, tableware, linen and warm lighting.", "/images/hero-event.png"],
+      ["Baby showers", "Relaxed seating, shade, tables and coordinated details.", "/images/lounge-product.png"],
+      ["Backyard events", "Flexible outdoor plans with cover and lighting options.", "/images/lighting-product.png"],
+      ["Corporate events", "Professional guest flow, staging, furniture and logistics.", "/images/flooring-product.png"],
+      ["Community events", "Scalable layouts, equipment, access and supplier timing.", "/images/tables-product.png"]
+    ]
+  },
+  "practicalTeam": {
+    "eyebrow": "ONE PRACTICAL TEAM",
+    "title": "One team for the practical details",
+    "description": "Use only the services your event needs. Your planner keeps the products, venue details and timing connected.",
+    "bullets": [
+      "Product selection & quantities",
+      "Styling and colour direction",
+      "Venue access review",
+      "Delivery and collection plan",
+      "Setup and pack-down timing",
+      "Weather and contingency planning",
+      "Supplier coordination",
+      "Event-day support"
+    ],
+    "link": { "text": "Discuss your event", "href": "/contact" },
+    "images": [
+      { "src": "/images/hero-event.png", "alt": "Warm garden dining setup" },
+      { "src": "/images/warehouse-team.png", "alt": "Delivery team" },
+      { "src": "/images/chairs-product.png", "alt": "Prepared event chairs" }
+    ]
+  },
+  "process": {
+    "eyebrow": "A CLEAR, SUPPORTED PROCESS",
+    "title": "A clear plan from first conversation to event day",
+    "steps": [
+      ["01", "Share your event"],
+      ["02", "Review the venue"],
+      ["03", "Build the plan"],
+      ["04", "Confirm every detail"],
+      ["05", "Deliver the event"]
+    ],
+    "note": "Clear decisions, responsibilities and next steps at every stage."
+  },
+  "pricingSupport": {
+    "eyebrow": "CLEAR STARTING POINTS",
+    "title": "Planning support that fits your event",
+    "description": "Choose a focused consultation or a tailored planning scope.",
+    "cards": [
+      {
+        "badge": "EVENT CONSULTATION",
+        "price": "$120",
+        "description": "A focused session covering priorities, quantities, layout and next steps.",
+        "bullets": ["60-minute consultation", "Practical recommendation summary", "Product and service shortlist"],
+        "link": { "text": "Book a consultation", "href": "/contact" }
+      },
+      {
+        "badge": "TAILORED EVENT PLAN",
+        "price": "Tailored quote",
+        "description": "For events needing a connected product, supplier and logistics plan.",
+        "bullets": ["Venue and access planning", "Product and service recommendations", "Run sheet and supplier coordination"],
+        "link": { "text": "Contact the planning team", "href": "/contact" }
+      }
+    ]
+  },
+  "meetTeam": {
+    "eyebrow": "MEET YOUR PLANNING TEAM",
+    "title": "Meet the people behind the plan",
+    "cards": [
+      {
+        "image": "/images/warehouse-team.png",
+        "imageAlt": "Event planning consultant",
+        "title": "Your planning consultant",
+        "subtitle": "Brief, layout and styling coordination",
+        "link": { "text": "Meet the planning team →", "href": "/contact" }
+      },
+      {
+        "image": "/images/hero-event.png",
+        "imageAlt": "Event operations team",
+        "title": "Your event operations team",
+        "subtitle": "Products, delivery, setup and collection",
+        "link": { "text": "How delivery works →", "href": "/contact" }
+      }
+    ]
+  },
+  "thinking": {
+    "eyebrow": "PLANNING INSIGHTS",
+    "title": "See the thinking behind each event",
+    "cards": [
+      ["Weather-ready garden reception", "/images/hero-event.png"],
+      ["Practical venue access plan", "/images/warehouse-team.png"],
+      ["A coordinated dining layout", "/images/tableware-product.png"]
+    ],
+    "cardText": "See the product, timing and logistics decisions that made the event work.",
+    "link": { "text": "Read case study →", "href": "/gallery" }
+  },
+  "remembered": {
+    "eyebrow": "WHAT CUSTOMERS REMEMBER",
+    "title": "Support customers remember",
+    "quote": "“The plan was calm, clear and practical. Every supplier knew the timing and the setup looked exactly as discussed.”",
+    "author": "Verified Melbourne event customer",
+    "link": { "text": "Read verified reviews →", "href": "/reviews" },
+    "image": "/images/marquee-product.png",
+    "imageAlt": "Completed marquee celebration"
+  },
+  "cta": {
+    "eyebrow": "READY TO PLAN?",
+    "title": "Let’s turn the details into a clear plan.",
+    "links": [
+      { "text": "Contact our planning team", "href": "/contact" },
+      { "text": "Request a quotation", "href": "/request-quote" }
+    ]
+  }
+}

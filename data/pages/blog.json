@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "eyebrow": "THE SK EVENT PLANNING GUIDE",
+    "title": "The SK Event\nPlanning Guide",
+    "description": "Practical ideas for choosing equipment, planning layouts, understanding delivery and creating a smoother event day.",
+    "searchPlaceholder": "Search planning guides",
+    "image": "/images/tableware-product.png",
+    "imageAlt": "Elegant event planning notebook and table setting"
+  },
+  "featured": {
+    "eyebrow": "EVENT PLANNING",
+    "title": "How Many Tables and Chairs Do I Need?",
+    "description": "A simple guest-count guide for ceremony, seated dining and cocktail layouts, with practical space and access checks.",
+    "ctaText": "Read this guide →",
+    "ctaHref": "/blog-how-many-tables-and-chairs",
+    "image": "/images/marquee-product.png",
+    "imageAlt": "Round tables arranged inside a marquee"
+  }
+}

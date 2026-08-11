@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "image": "/images/hero-event.png",
+    "imageAlt": "Beautiful outdoor wedding reception under a marquee at dusk",
+    "eyebrow": "Melbourne’s event hire team",
+    "title": "Everything you need for a beautiful, stress-free event.",
+    "description": "Plan, hire and bring it all together with quality event furniture, marquees, lighting and practical support from one Melbourne team.",
+    "primaryCta": { "text": "Request a quote", "href": "/request-quote" },
+    "secondaryCta": { "text": "Browse event hire", "href": "/products" }
+  },
+  "search": {
+    "title": "What are you planning?",
+    "subtitle": "Tell us the essentials and we’ll help shape your hire list.",
+    "briefLink": { "text": "Prefer a detailed brief? →", "href": "/request-quote" },
+    "buttonText": "Check availability"
+  },
+  "miniBenefits": [
+    { "title": "Melbourne-wide delivery", "subtitle": "Metro and regional quotes" },
+    { "title": "Flexible hire", "subtitle": "Products, packages or support" },
+    { "title": "Friendly advice", "subtitle": "Real help from event people" },
+    { "title": "Fair pricing", "subtitle": "Clear, itemised quotations" }
+  ],
+  "categoriesHeading": {
+    "eyebrow": "Browse the range",
+    "title": "Start with what you need",
+    "description": "Explore our most popular hire categories for events of every size.",
+    "link": { "text": "View all products →", "href": "/products" }
+  },
+  "occasionsHeading": {
+    "eyebrow": "Plan by occasion",
+    "title": "Planning for a special event?",
+    "description": "Choose your event and explore practical packages, products and services.",
+    "link": { "text": "Explore all event types →", "href": "/collections" }
+  },
+  "occasions": [
+    ["Weddings & engagements", "/images/hero-event.png", "/collection-weddings"],
+    ["Birthdays", "/images/decor-product.png", "/collections"],
+    ["Corporate events", "/images/flooring-product.png", "/packages"],
+    ["Cultural & community", "/images/tables-product.png", "/collections"],
+    ["Outdoor parties", "/images/marquee-product.png", "/collections"]
+  ],
+  "popularHeading": {
+    "eyebrow": "Customer favourites",
+    "title": "Popular with Melbourne hosts",
+    "description": "Practical favourites for celebrations of every size.",
+    "link": { "text": "Browse all products →", "href": "/products" }
+  },
+  "popular": [
+    ["White Bistro Chair", "Chairs", "From $8.50 ea", "/images/chairs-product.png", "/product-natural-bentwood-chair"],
+    ["1.8m Trestle Table", "Tables", "From $32.00", "/images/tables-product.png", "/products"],
+    ["Mushroom Gas Heater", "Heating", "From $75.00", "/images/lighting-product.png", "/products"],
+    ["3m × 6m Pop-up Marquee", "Marquees", "From $390.00", "/images/marquee-product.png", "/products"]
+  ],
+  "servicesHeading": {
+    "eyebrow": "Services that fit your event",
+    "title": "A simpler way to hire",
+    "description": "Start with a package or select only the support you need.",
+    "link": { "text": "View all services →", "href": "/planning" }
+  },
+  "services": [
+    ["Event equipment hire", "Furniture, tableware, marquees and lighting, prepared for your date.", "From $420", "/images/hero-event.png"],
+    ["Marquee hire", "Weather-ready structures with flooring, walling and installation options.", "From $1,850", "/images/marquee-product.png"],
+    ["Outdoor wedding hire", "Coordinated ceremony and reception equipment for garden venues.", "From $2,450", "/images/decor-product.png"],
+    ["Corporate presentation", "Staging, seating, tables and practical lighting for business events.", "From $1,500", "/images/flooring-product.png"]
+  ],
+  "processHeading": {
+    "eyebrow": "Simple from start to finish",
+    "title": "From idea to event day in four easy steps"
+  },
+  "processSteps": [
+    ["1", "Choose dates & products", "Tell us the event date, venue and what you need."],
+    ["2", "Select package or delivery", "Choose self-pickup, delivery, setup or a tailored package."],
+    ["3", "We confirm the details", "We check availability and send a clear final quotation."],
+    ["4", "Enjoy your event", "Track the order while we prepare, deliver and collect."]
+  ],
+  "guidance": {
+    "eyebrow": "Need a little guidance?",
+    "title": "Need help bringing it all together?",
+    "description": "Our event team can recommend quantities, combinations and logistics for your space, guest count and budget.",
+    "points": [
+      "Product quantities for your guest count",
+      "Venue access and delivery planning",
+      "Wet-weather and backup options",
+      "A clear, itemised hire estimate"
+    ],
+    "teamLink": { "text": "Talk to our team →", "href": "/contact" },
+    "briefLink": { "text": "Start an event brief", "href": "/planning" },
+    "image": "/images/warehouse-team.png",
+    "imageAlt": "SK Event Hire team helping a customer plan an event"
+  },
+  "inspirationHeading": {
+    "eyebrow": "Real event inspiration",
+    "title": "See how it comes together",
+    "description": "Explore real combinations of furniture, lighting, marquees and styling.",
+    "link": { "text": "View the gallery →", "href": "/gallery" }
+  },
+  "inspiration": [
+    { "title": "Outdoor wedding reception", "image": "/images/lighting-product.png", "alt": "Outdoor wedding reception with warm lighting", "main": true },
+    { "title": "Marquee wedding", "image": "/images/hero-event.png", "alt": "Marquee wedding" },
+    { "title": "Corporate function", "image": "/images/flooring-product.png", "alt": "Corporate function" },
+    { "title": "Cultural celebration", "image": "/images/decor-product.png", "alt": "Cultural celebration" },
+    { "title": "Garden celebration", "image": "/images/marquee-product.png", "alt": "Garden celebration" }
+  ],
+  "reviewsHeading": {
+    "eyebrow": "Verified event reviews",
+    "title": "Trusted for events that matter",
+    "description": "Real feedback from customers across Melbourne and Victoria."
+  },
+  "reviewsSummary": {
+    "rating": "4.9",
+    "stars": "★★★★★",
+    "label": "Average rating from verified event hires"
+  },
+  "reviews": [
+    { "initials": "MJ", "name": "Mia & James", "address": "Richmond, VIC", "event": "Backyard wedding · 86 guests", "date": "Hired in November 2025", "rating": "5.0", "count": "18 reviews", "quote": "The team made our backyard wedding feel completely manageable. Delivery was on time, every item was spotless and the warm lighting looked beautiful." },
+    { "initials": "OC", "name": "Olivia Chen", "address": "Docklands, VIC", "event": "Corporate celebration · 140 guests", "date": "Hired in March 2026", "rating": "4.9", "count": "11 reviews", "quote": "Clear quotation, friendly advice and excellent furniture. The delivery window was accurate and the whole corporate event ran smoothly." },
+    { "initials": "SP", "name": "Sarah Patel", "address": "Brighton, VIC", "event": "Garden birthday · 64 guests", "date": "Hired in February 2026", "rating": "4.8", "count": "7 reviews", "quote": "The products were spotless and the collection process was simple. The team helped us choose the correct quantities and we would happily hire again." }
+  ],
+  "serviceArea": {
+    "image": "/images/warehouse-team.png",
+    "imageAlt": "Event hire delivery team in Melbourne",
+    "eyebrow": "Delivery & collection across Victoria",
+    "title": "Event hire across Melbourne",
+    "description": "Professional delivery, setup and collection for homes, venues, gardens and corporate spaces.",
+    "inputPlaceholder": "Enter your suburb or postcode",
+    "buttonText": "Check area",
+    "buttonHref": "/contact",
+    "note": "Warehouse pickup is available by appointment for eligible items."
+  },
+  "articlesHeading": {
+    "eyebrow": "Planning tips & inspiration",
+    "title": "Helpful ideas for a smoother event",
+    "link": { "text": "Visit the planning guide →", "href": "/blog" }
+  },
+  "articles": [
+    ["How many chairs and tables do I need?", "/images/chairs-product.png"],
+    ["Choosing the right marquee size", "/images/marquee-product.png"],
+    ["Outdoor dinner party checklist", "/images/lighting-product.png"]
+  ],
+  "faqHeading": {
+    "eyebrow": "Before you book",
+    "title": "Questions before you book?",
+    "link": { "text": "View all FAQs →", "href": "/help" }
+  },
+  "faqs": [
+    "How long is the standard hire period?",
+    "Do you deliver, set up and collect?",
+    "Can I collect and return the equipment myself?",
+    "What happens if my event date changes?",
+    "Is a security bond required?"
+  ],
+  "readyBand": {
+    "leftImage": "/images/decor-product.png",
+    "leftImageAlt": "Event styling details",
+    "eyebrow": "Let’s make it easy",
+    "title": "Ready to start planning?",
+    "description": "Check availability, build a hire list or speak with our Melbourne event team.",
+    "actions": [
+      { "text": "Request a quote", "href": "/request-quote", "primary": true },
+      { "text": "Browse hire range", "href": "/products" },
+      { "text": "Talk to the team", "href": "/contact" }
+    ],
+    "rightImage": "/images/lighting-product.png",
+    "rightImageAlt": "Warm event lighting"
+  }
+}

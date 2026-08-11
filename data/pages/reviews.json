@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "eyebrow": "VERIFIED CUSTOMER REVIEWS",
+    "title": "Real events.\nHonest experiences.",
+    "description": "Read feedback from customers who hired furniture, marquees, lighting and complete event support from SK Event Hire.",
+    "ctaLeft": { "text": "Share your experience", "href": "#review-form" },
+    "ctaRight": { "text": "Write a review", "href": "#review-list" },
+    "badge": "✓ Every published review is linked to a completed hire",
+    "image": "/images/hero-event.png",
+    "imageAlt": "Beautiful marquee wedding reception"
+  },
+  "summary": {
+    "eyebrow": "AT A GLANCE",
+    "title": "Reviews from real SK Event Hire bookings",
+    "description": "Only customers connected to completed bookings can submit verified event feedback."
+  }
+}
