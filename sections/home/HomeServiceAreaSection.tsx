@@ -2,24 +2,28 @@ import React from "react";
 import homeData from "@/data/pages/home.json";
 
 export function HomeServiceAreaSection() {
-  const { serviceArea } = homeData;
+  const { serviceArea } = homeData as any;
   return (
     <section className="service-area-home">
-      <div style={{ position: "relative" }}>
-        <img src={serviceArea.image} alt={serviceArea.imageAlt} style={{ width: "100%", height: "270px", objectFit: "cover", borderRadius: "8px", display: "block" }} />
-        <span style={{ position: "absolute", bottom: "12px", left: "12px", background: "#092742", color: "#fff", padding: "6px 12px", borderRadius: "4px", fontSize: "11px", fontWeight: "700" }}>
+      <div className="service-area-image-wrap">
+        <img
+          src={serviceArea?.image || "/images/warehouse-team.png"}
+          alt={serviceArea?.imageAlt || "Melbourne delivery & pickup"}
+          className="service-area-img"
+        />
+        <span className="service-area-badge">
           Melbourne delivery & pickup
         </span>
       </div>
-      <div>
-        <div className="eyebrow">{serviceArea.eyebrow}</div>
-        <h2>{serviceArea.title}</h2>
-        <p>{serviceArea.description}</p>
+      <div className="service-area-content">
+        <div className="eyebrow">{serviceArea?.eyebrow || "DELIVERY & CUSTOMER PICKUP"}</div>
+        <h2>{serviceArea?.title || "Event hire across Melbourne"}</h2>
+        <p>{serviceArea?.description || "Enter your postcode to see delivery options and an indicative fee. Customer pickup is also available by appointment."}</p>
         <div className="area-search">
-          <input placeholder={serviceArea.inputPlaceholder} />
-          <a href={serviceArea.buttonHref}>{serviceArea.buttonText}</a>
+          <input placeholder={serviceArea?.inputPlaceholder || "Enter postcode"} />
+          <a href={serviceArea?.buttonHref || "/contact"}>{serviceArea?.buttonText || "Check area"}</a>
         </div>
-        <small>{serviceArea.note}</small>
+        <small>{serviceArea?.note || "Final delivery timing and pricing are confirmed with your booking."}</small>
       </div>
     </section>
   );

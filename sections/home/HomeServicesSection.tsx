@@ -42,33 +42,32 @@ export function HomeServicesSection() {
     <section className="home-section warm">
       <div className="home-heading">
         <div>
-          <div className="eyebrow">{servicesHeading.eyebrow}</div>
-          <h2>{servicesHeading.title}</h2>
-          <p>{servicesHeading.description}</p>
+          <div className="eyebrow">{servicesHeading?.eyebrow || "READY-MADE COMBINATIONS"}</div>
+          <h2>{servicesHeading?.title || "A simpler way to hire"}</h2>
+          <p>{servicesHeading?.description || "Start with a package and adjust every item to suit your event."}</p>
         </div>
-        <a href={servicesHeading.link.href}>{servicesHeading.link.text}</a>
+        {servicesHeading?.link && (
+          <a href={servicesHeading.link.href}>{servicesHeading.link.text}</a>
+        )}
       </div>
+
       <div className="service-grid">
         {items.map((x: any) => (
-          <article key={x.title}>
-            <div style={{ position: "relative" }}>
-              <img src={x.image} alt={x.title} style={{ width: "100%", height: "155px", objectFit: "cover" }} />
-              <h3 style={{ position: "absolute", bottom: "10px", left: "12px", color: "#fff", margin: 0, fontSize: "16px", fontWeight: "800", textShadow: "0 2px 4px rgba(0,0,0,0.6)" }}>
-                {x.title}
-              </h3>
+          <article className="service-card-flush" key={x.title}>
+            <div className="service-card-image-wrap">
+              <img src={x.image} alt={x.title} className="service-card-img" />
+              <h3 className="service-card-title">{x.title}</h3>
             </div>
-            <div style={{ padding: "14px" }}>
-              <small style={{ display: "block", fontSize: "11px", letterSpacing: "0.05em", color: "#71808c", fontWeight: "800", marginBottom: "8px" }}>
-                {x.tag}
-              </small>
-              <ul style={{ listStyle: "none", padding: 0, margin: "0 0 12px 0", fontSize: "12px", color: "#667885", lineHeight: "1.6" }}>
+            <div className="service-card-body">
+              <small className="service-card-tag">{x.tag}</small>
+              <ul className="service-card-bullets">
                 {x.bullets && x.bullets.map((b: string, idx: number) => (
-                  <li key={idx}>• {b}</li>
+                  <li key={idx}>+ {b}</li>
                 ))}
               </ul>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                <b style={{ fontSize: "14px", color: "#0d2e48" }}>{x.price}</b>
-                <a href={x.href} style={{ color: "#dc5a46", fontWeight: "800", fontSize: "14px" }}>→</a>
+              <div className="service-card-footer">
+                <b className="service-card-price">{x.price}</b>
+                <a href={x.href || "/packages"} className="service-card-link">→</a >
               </div>
             </div>
           </article>
