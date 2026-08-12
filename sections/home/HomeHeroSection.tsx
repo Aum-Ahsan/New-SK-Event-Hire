@@ -5,7 +5,7 @@ export function HomeHeroSection() {
   const { hero } = homeData;
   const eyebrow = hero?.eyebrow || "MELBOURNE'S FRIENDLY EVENT HIRE TEAM";
   const title = hero?.title || "Everything you need for a beautiful, stress-free event.";
-  const description = hero?.description || "Hire quality chairs, tables, marquees, heating, lighting and event essentials across Melbourne—with friendly planning support when you need it.";
+  const description = hero?.description || "Hire quality chairs, tables, marquees, heating, lighting and event essentials across Melbourne with friendly planning support when you need it.";
   const primaryCta = hero?.primaryCta || { text: "Browse hire products \u2192", href: "/products" };
   const secondaryCta = hero?.secondaryCta || { text: "Plan my event", href: "/planning" };
 

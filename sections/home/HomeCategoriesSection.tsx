@@ -14,6 +14,9 @@ export function HomeCategoriesSection() {
     { name: "Décor & Games", image: "/images/decor-product.png", href: "/products" }
   ];
 
+  const row1 = items.slice(0, 4);
+  const row2 = items.slice(4);
+
   return (
     <section className="home-section warm">
       <div className="home-heading">
@@ -25,14 +28,28 @@ export function HomeCategoriesSection() {
         <a href={categoriesHeading.link.href}>{categoriesHeading.link.text}</a>
       </div>
       <div className="category-photo-grid">
-        {items.map((x: any) => (
-          <a href={x.href} key={x.name}>
-            <img src={x.image} alt={x.name} />
-            <span>
-              {x.name} <b>→</b>
-            </span>
-          </a>
-        ))}
+        <div className="category-scroll-row">
+          {row1.map((x: any) => (
+            <a href={x.href} key={x.name}>
+              <img src={x.image} alt={x.name} />
+              <span>
+                {x.name} <b>→</b>
+              </span>
+            </a>
+          ))}
+        </div>
+        {row2.length > 0 && (
+          <div className="category-scroll-row">
+            {row2.map((x: any) => (
+              <a href={x.href} key={x.name}>
+                <img src={x.image} alt={x.name} />
+                <span>
+                  {x.name} <b>→</b>
+                </span>
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

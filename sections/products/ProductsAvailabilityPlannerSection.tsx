@@ -51,14 +51,15 @@ export function ProductsAvailabilityPlannerSection({
         <label>
           <span>EVENT TYPE</span>
           <select
-            value={eventType === "All" ? eventTypes[0] : eventType}
+            value={eventType === "All" ? "" : eventType}
             onChange={(e) => {
               setEventType(e.target.value);
               setPage(1);
             }}
           >
+            <option value="" disabled hidden>Select event type</option>
             {eventTypes.map((type) => (
-              <option key={type}>{type}</option>
+              <option key={type} value={type}>{type}</option>
             ))}
           </select>
         </label>

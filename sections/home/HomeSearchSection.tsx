@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import homeData from "@/data/pages/home.json";
+import { eventTypes } from "@/components/common/CategoryCards";
 
 export function HomeSearchSection() {
   const { search } = homeData;
+  const [eventType, setEventType] = useState<string>("");
+  const [eventDate, setEventDate] = useState<string>("");
+  const [returnDate, setReturnDate] = useState<string>("");
+  const [postcode, setPostcode] = useState<string>("");
+  const [guests, setGuests] = useState<number | "">("");
+
   return (
     <section className="planning-search">
       <div className="search-title">
@@ -13,6 +20,15 @@ export function HomeSearchSection() {
       </div>
       <div className="search-fields home-availability-fields">
         <label>
+          <span>EVENT TYPE</span>
+          <select value={eventType} onChange={(e) => setEventType(e.target.value)}>
+            <option value="" disabled hidden>Select event type</option>
+            {eventTypes.map((type) => (
+              <option key={type} value={type}>{type}</option>
+            ))}
+          </select>
+        </label>
+        <label>
           <span>{search.eventDateLabel || "EVENT DATE"}</span>
           <input
             type="text"
@@ -21,6 +37,8 @@ export function HomeSearchSection() {
             onBlur={(e) => {
               if (!e.target.value) e.target.type = "text";
             }}
+            value={eventDate}
+            onChange={(e) => setEventDate(e.target.value)}
           />
         </label>
         <label>
@@ -32,19 +50,34 @@ export function HomeSearchSection() {
             onBlur={(e) => {
               if (!e.target.value) e.target.type = "text";
             }}
+            value={returnDate}
+            onChange={(e) => setReturnDate(e.target.value)}
           />
         </label>
         <label>
           <span>{search.postcodeLabel || "DELIVERY POSTCODE"}</span>
           <input
             type="text"
-            placeholder={search.postcodePlaceholder || "Enter Melbourne postcode"}
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value)}
+            placeholder={search.postcodePlaceholder || "Enter postcode"}
           />
         </label>
         <label>
           <span>{search.guestsLabel || "GUESTS"}</span>
           <input
-            type="text"
+            type="number"
+            min="0"
+            value={guests}
+            onChange={(e) => {
+              const val = e.target.value;
+              if (val === "") {
+                setGuests("");
+              } else {
+                const parsed = parseInt(val, 10);
+                setGuests(isNaN(parsed) ? "" : Math.max(0, parsed));
+              }
+            }}
             placeholder={search.guestsPlaceholder || "How many?"}
           />
         </label>
@@ -56,3 +89,4 @@ export function HomeSearchSection() {
     </section>
   );
 }
+

@@ -28,14 +28,16 @@ export function HomeReviewsSection() {
           {reviewList.map((review: any, i: number) => (
             <blockquote className={reviewIndex === i ? "active" : ""} key={`${review.name}-${i}`}>
               <header>
-                <i aria-hidden="true">{review.initials || "C"}</i>
-                <div>
-                  <b>{review.name}</b>
-                  <small>{review.address}</small>
-                  <em>✓ Verified hire</em>
-                </div>
-                <div className="review-rating">
-                  <span>★★★★★</span>
+                <i aria-hidden="true">{(review.name || review.author || "C")[0]}</i>
+                <div className="review-header-info">
+                  <div className="review-author-row">
+                    <b>{review.name || "Verified Customer"}</b>
+                    <div className="review-rating">
+                      <span>★★★★★</span>
+                    </div>
+                  </div>
+                  {review.address && <small>{review.address}</small>}
+                  <em>{review.badge || "✓ Verified hire"}</em>
                 </div>
               </header>
 
@@ -43,7 +45,7 @@ export function HomeReviewsSection() {
 
               <footer>
                 <div>
-                  {review.event && <b>{review.event}</b>}
+                  {review.author && review.name && <b>{review.author}</b>}
                   {review.date && <small>{review.date}</small>}
                 </div>
                 <nav className="review-nav-bottom">

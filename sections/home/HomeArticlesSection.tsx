@@ -22,9 +22,11 @@ export function HomeArticlesSection() {
         {items.map((x: any) => (
           <article key={x.title}>
             <img src={x.image} alt={x.title} />
-            <small>{x.category || "PLANNING GUIDE"}</small>
-            <h3>{x.title}</h3>
-            <a href={x.href || "/blog"}>{x.linkText || "Read guide →"}</a>
+            <div className="article-body">
+              <small>{x.category || "PLANNING GUIDE"}</small>
+              <h3>{x.title}</h3>
+              <a href={x.href || "/blog"}>{x.linkText || "Read guide →"}</a>
+            </div>
           </article>
         ))}
       </div>
