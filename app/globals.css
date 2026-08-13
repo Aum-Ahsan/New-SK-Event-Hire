@@ -5283,8 +5283,10 @@ main {
   font-size: 12px;
   font-weight: 900;
   color: #17344c;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
+
 
 .catalogue-filters fieldset label {
   display: flex;
@@ -6022,7 +6024,22 @@ main {
   }
 
   .reference-product-grid {
-    grid-template-columns: repeat(2, 1fr)
+    grid-auto-flow: column;
+    grid-template-columns: unset;
+    grid-auto-columns: 280px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 16px;
+    padding-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reference-product-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reference-product-grid article {
+    scroll-snap-align: start;
   }
 
   .product-image {
@@ -6112,8 +6129,9 @@ main {
   }
 
   .reference-product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9px
+    grid-template-columns: unset;
+    grid-auto-columns: 80vw;
+    gap: 9px;
   }
 
   .product-image {
@@ -23633,6 +23651,7 @@ html {
 
 /* iPad Rotate / Landscape & Tablet View Footer Alignment */
 @media (min-width: 768px) {
+
   .public-site .public-footer,
   .public-footer,
   .home-v4 .public-footer {
@@ -23681,4 +23700,236 @@ html {
     font-weight: 700 !important;
     margin-bottom: 5px !important;
   }
-}
+}
+
+/* Availability Planner Subtitle Line Styling */
+.search-title {
+  width: 100% !important;
+}
+
+.search-title>div {
+  width: 100% !important;
+}
+
+.availability-subtitle {
+  display: block !important;
+  color: #556877 !important;
+  font-size: 14px !important;
+  margin-top: 4px !important;
+  line-height: 1.5 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 100% !important;
+}
+
+.availability-subtitle.checked {
+  color: #15693b !important;
+  font-weight: 700 !important;
+}
+
+/* Catalogue Search Header Sort Vertical Alignment & Compact Width Chevron Arrow */
+.catalogue-sort-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  vertical-align: middle !important;
+  width: auto !important;
+  max-width: fit-content !important;
+}
+
+.catalogue-sort-wrapper .sort-label {
+  font-size: 13px !important;
+  color: #556877 !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.catalogue-sort-wrapper select,
+.catalogue-search select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: fit-content !important;
+  height: 36px !important;
+  padding: 0 26px 0 12px !important;
+  border: 1px solid #d4dbe0 !important;
+  border-radius: 18px !important;
+  background-color: #fff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230c2340' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 10px center !important;
+  background-size: 11px 11px !important;
+  color: #0c2340 !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  vertical-align: middle !important;
+}
+
+.catalogue-availability-fields select {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230c2340' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 12px 12px !important;
+  padding-right: 36px !important;
+}
+
+/* Catalogue Product Card Price Section Styling - Grid View (Right Aligned Subtext) */
+.catalogue-price {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.price-main {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+  font-size: 13px !important;
+  color: #556877 !important;
+  font-weight: 500 !important;
+}
+
+.price-main strong {
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  color: #091f36 !important;
+}
+
+.price-sub,
+.catalogue-price small {
+  display: block !important;
+  text-align: right !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  color: #687887 !important;
+  font-weight: 400 !important;
+}
+
+/* List View Specific Product Card Layout */
+.reference-product-grid.list-view {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.reference-product-grid.list-view article {
+  display: grid !important;
+  grid-template-columns: 280px 1fr !important;
+  gap: 20px !important;
+  align-items: center !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8ed !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.reference-product-grid.list-view article>div {
+  padding: 20px 24px 20px 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+
+.reference-product-grid.list-view .catalogue-price {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  width: auto !important;
+  margin-top: 10px !important;
+  margin-bottom: 14px !important;
+  text-align: left !important;
+}
+
+.reference-product-grid.list-view .price-main {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: 4px !important;
+}
+
+.reference-product-grid.list-view .price-sub,
+.reference-product-grid.list-view .catalogue-price small {
+  display: inline-block !important;
+  text-align: left !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  color: #687887 !important;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  vertical-align: middle !important;
+}
+
+.reference-product-grid.list-view footer {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: auto !important;
+  margin-top: 0 !important;
+  justify-content: flex-start !important;
+}
+
+.reference-product-grid.list-view footer a {
+  width: auto !important;
+  min-width: 130px !important;
+  padding: 10px 20px !important;
+  text-align: center !important;
+}
+
+
+/* View Toggle Buttons Contrast & Active States */
+.view-toggle-btns {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  background: #edf2f6 !important;
+  padding: 3px !important;
+  border-radius: 9px !important;
+  border: 1px solid #d4dbe0 !important;
+}
+
+.view-toggle-btns button {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 6px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #687887 !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.view-toggle-btns button:hover {
+  color: #0c2340 !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.view-toggle-btns button.active {
+  background: #091f36 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(9, 31, 54, 0.2) !important;
+}

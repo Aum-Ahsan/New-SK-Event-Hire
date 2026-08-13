@@ -107,12 +107,26 @@ export function ProductsWorkspaceSection({
             <h2>{listing.length} products</h2>
             <small>{availability}</small>
           </div>
-          <div>
-            <button className={view === "grid" ? "active" : ""} onClick={() => setView("grid")} aria-label="Grid view">
-              ▦
+          <div className="view-toggle-btns">
+            <button
+              className={view === "grid" ? "active" : ""}
+              onClick={() => setView("grid")}
+              aria-label="Grid view"
+              title="Grid view"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
+              </svg>
             </button>
-            <button className={view === "list" ? "active" : ""} onClick={() => setView("list")} aria-label="List view">
-              ☷
+            <button
+              className={view === "list" ? "active" : ""}
+              onClick={() => setView("list")}
+              aria-label="List view"
+              title="List view"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 4h18v3H3V4zm0 7h18v3H3v-3zm0 7h18v3H3v-3z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -153,8 +167,10 @@ export function ProductsWorkspaceSection({
                 <p>● &nbsp;Available · Professional unit prepared</p>
                 <div className="colour-dot">● &nbsp;{(i % 3) + 1} colour{(i % 3) ? "s" : ""}</div>
                 <b className="catalogue-price">
-                  from <strong>{p.price.replace("each", "")}</strong>{" "}
-                  <small>
+                  <span className="price-main">
+                    from <strong>{p.price.replace("each", "")}</strong>
+                  </span>
+                  <small className="price-sub">
                     per item / day
                     <br />
                     GST calculated at checkout

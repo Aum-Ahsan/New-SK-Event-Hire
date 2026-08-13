@@ -12,8 +12,8 @@ interface ProductsAvailabilityPlannerSectionProps {
   setReturnDate: (val: string) => void;
   postcode: string;
   setPostcode: (val: string) => void;
-  guestCount: number;
-  setGuestCount: (val: number) => void;
+  guestCount: number | "";
+  setGuestCount: (val: number | "") => void;
   setAvailability: (val: string) => void;
   setPage: (val: number) => void;
 }
@@ -38,14 +38,17 @@ export function ProductsAvailabilityPlannerSection({
   const subtitle = availabilityPlanner?.subtitle || "Set your dates, location and guest count to check relevant hire stock.";
   const buttonText = availabilityPlanner?.buttonText || "Check availability";
 
+  const isChecked = availability.includes("products checked for");
+
   return (
     <section className="planning-search catalogue-planner">
       <div className="search-title">
         <div>
           <b>{title}</b>
-          <span>{subtitle}</span>
+          <span className={isChecked ? "availability-subtitle checked" : "availability-subtitle"}>
+            {availability}
+          </span>
         </div>
-        <small>{availability}</small>
       </div>
       <div className="search-fields catalogue-availability-fields">
         <label>
@@ -69,22 +72,37 @@ export function ProductsAvailabilityPlannerSection({
         </label>
         <label>
           <span>RETURN DATE</span>
-          <input id="return-date" type="date" min={eventDate} value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
+          <input id="return-date" type="date" min={eventDate || undefined} value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
         </label>
         <label>
           <span>POSTCODE</span>
-          <input id="event-postcode" inputMode="numeric" value={postcode} onChange={(e) => setPostcode(e.target.value.replace(/\D/g, "").slice(0, 4))} />
+          <input
+            id="event-postcode"
+            inputMode="numeric"
+            placeholder="Postcode"
+            value={postcode}
+            onChange={(e) => setPostcode(e.target.value.replace(/\D/g, "").slice(0, 4))}
+          />
         </label>
         <label>
           <span>NUMBER OF GUESTS</span>
-          <input type="number" min="1" value={guestCount} onChange={(e) => setGuestCount(Math.max(1, Number(e.target.value) || 1))} />
+          <input
+            type="number"
+            min="1"
+            placeholder="Guests"
+            value={guestCount}
+            onChange={(e) => {
+              const val = e.target.value;
+              setGuestCount(val === "" ? "" : Math.max(1, Number(val) || 1));
+            }}
+          />
         </label>
         <button
           onClick={() =>
             setAvailability(
-              eventDate && returnDate && postcode.length === 4
+              eventDate && returnDate && postcode.length === 4 && guestCount !== ""
                 ? `42 products checked for ${eventDate.split("-").reverse().join("/")}–${returnDate.split("-").reverse().join("/")} · ${guestCount} guests · ${postcode}`
-                : "Complete both dates and a four-digit postcode."
+                : "Complete both dates, postcode and guest count to check availability."
             )
           }
         >

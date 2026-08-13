@@ -17,13 +17,13 @@ export function ProductsPage({ hireProducts }: { hireProducts: any[] }) {
   const [sort, setSort] = useState("recommended");
   const [maxPrice, setMaxPrice] = useState(3000);
   const [page, setPage] = useState(1);
-  const [eventDate, setEventDate] = useState("2026-09-12");
-  const [returnDate, setReturnDate] = useState("2026-09-14");
-  const [postcode, setPostcode] = useState("3000");
-  const [guestCount, setGuestCount] = useState(80);
+  const [eventDate, setEventDate] = useState("");
+  const [returnDate, setReturnDate] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [guestCount, setGuestCount] = useState<number | "">("");
   const categoryRail = useRef<HTMLDivElement>(null);
   const drag = useRef({ active: false, start: 0, left: 0 });
-  const [availability, setAvailability] = useState("Set your dates, postcode and guest count, then check availability.");
+  const [availability, setAvailability] = useState("Set your dates, location and guest count to check relevant hire stock.");
 
   const baseListing = [...hireProducts];
   const listing = baseListing
