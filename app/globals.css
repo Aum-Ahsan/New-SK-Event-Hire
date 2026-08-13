@@ -2820,11 +2820,11 @@ main {
   }
 
   .public-footer {
-    grid-template-columns: 2fr 1fr 1fr
+    grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(110px, 1fr))
   }
 
   .public-footer>div:last-child {
-    grid-column: 2
+    grid-column: auto
   }
 
   .how>div:last-child {
@@ -15475,11 +15475,11 @@ main {
 
 @media(max-width:1050px) {
   .footer-inner {
-    grid-template-columns: 1.4fr repeat(2, 1fr)
+    grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(110px, 1fr))
   }
 
   .footer-links:nth-of-type(4) {
-    grid-column: 2
+    grid-column: auto
   }
 
   .blog-hero>img {
@@ -20459,12 +20459,12 @@ html {
   }
 
   .home-v4 .public-footer {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: minmax(220px, 1.5fr) repeat(3, minmax(110px, 1fr));
     gap: 30px
   }
 
   .home-v4 .public-footer>div:last-child {
-    grid-column: 2/4
+    grid-column: auto
   }
 }
 
@@ -23630,3 +23630,55 @@ html {
     max-height: 200px !important;
   }
 }
+
+/* iPad Rotate / Landscape & Tablet View Footer Alignment */
+@media (min-width: 768px) {
+  .public-site .public-footer,
+  .public-footer,
+  .home-v4 .public-footer {
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+    background: #091f36 !important;
+  }
+
+  .public-site .footer-inner,
+  .footer-inner,
+  .home-v4 .footer-inner {
+    width: min(calc(100% - 48px), 1280px) !important;
+    margin: 0 auto !important;
+    padding: 58px 0 24px !important;
+    display: grid !important;
+    grid-template-columns: minmax(220px, 1.6fr) repeat(3, minmax(110px, 1fr)) !important;
+    gap: 34px 24px !important;
+    align-items: start !important;
+  }
+
+  .footer-links:nth-of-type(4),
+  .public-footer>div:last-child,
+  .home-v4 .public-footer>div:last-child {
+    grid-column: auto !important;
+  }
+
+  .footer-connect {
+    grid-column: 1 / -1 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-top: 24px !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1.4fr !important;
+    gap: 28px !important;
+  }
+
+  .footer-bottom {
+    grid-column: 1 / -1 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+    padding-top: 20px !important;
+  }
+
+  .footer-about b,
+  .footer-column-title {
+    color: #e6bd72 !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+  }
+}
