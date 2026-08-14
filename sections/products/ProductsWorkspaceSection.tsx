@@ -149,40 +149,53 @@ export function ProductsWorkspaceSection({
           <button onClick={clearFilters}>Clear all</button>
         </div>
         <div className={`reference-product-grid ${view === "list" ? "list-view" : ""}`}>
-          {visibleProducts.map((p, i) => (
-            <article key={p.slug}>
-              <a className="product-image" href={`/product-${p.slug}`}>
-                <img src={p.image} alt={p.name} />
-                <em>{i % 4 === 0 ? "POPULAR" : i % 5 === 0 ? "PREMIUM" : ""}</em>
-                <i>♡</i>
-              </a>
-              <div>
-                <small>{p.category}</small>
-                <h3>
-                  <a href={`/product-${p.slug}`}>{p.name}</a>
-                </h3>
-                <span className="stars">
-                  ★ 4.{9 - (i % 3)} <small>({12 + i})</small>
-                </span>
-                <p>● &nbsp;Available · Professional unit prepared</p>
-                <div className="colour-dot">● &nbsp;{(i % 3) + 1} colour{(i % 3) ? "s" : ""}</div>
-                <b className="catalogue-price">
-                  <span className="price-main">
-                    from <strong>{p.price.replace("each", "")}</strong>
+          {(() => {
+            const articles = visibleProducts.map((p, i) => (
+              <article key={p.slug}>
+                <a className="product-image" href={`/product-${p.slug}`}>
+                  <img src={p.image} alt={p.name} />
+                  <em>{i % 4 === 0 ? "POPULAR" : i % 5 === 0 ? "PREMIUM" : ""}</em>
+                  <i>♡</i>
+                </a>
+                <div>
+                  <small>{p.category}</small>
+                  <h3>
+                    <a href={`/product-${p.slug}`}>{p.name}</a>
+                  </h3>
+                  <span className="stars">
+                    ★ 4.{9 - (i % 3)} <small>({12 + i})</small>
                   </span>
-                  <small className="price-sub">
-                    per item / day
-                    <br />
-                    GST calculated at checkout
-                  </small>
-                </b>
-                <footer>
-                  <a href={`/product-${p.slug}`}>View details</a>
-                  <a href="/basket">Quick add</a>
-                </footer>
-              </div>
-            </article>
-          ))}
+                  <p>● &nbsp;Available · Professional unit prepared</p>
+                  <div className="colour-dot">● &nbsp;{(i % 3) + 1} colour{(i % 3) ? "s" : ""}</div>
+                  <b className="catalogue-price">
+                    <span className="price-main">
+                      from <strong>{p.price.replace("each", "")}</strong>
+                    </span>
+                    <small className="price-sub">
+                      per item / day
+                      <br />
+                      GST calculated at checkout
+                    </small>
+                  </b>
+                  <footer>
+                    <a href={`/product-${p.slug}`}>View details</a>
+                    <a href="/basket">Quick add</a>
+                  </footer>
+                </div>
+              </article>
+            ));
+
+            return (
+              <>
+                <div className="reference-product-grid-row">
+                  {articles.filter((_, i) => i % 2 === 0)}
+                </div>
+                <div className="reference-product-grid-row">
+                  {articles.filter((_, i) => i % 2 !== 0)}
+                </div>
+              </>
+            );
+          })()}
         </div>
         {listing.length === 0 && (
           <div className="empty-results">

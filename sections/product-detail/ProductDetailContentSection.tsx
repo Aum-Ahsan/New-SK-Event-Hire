@@ -37,7 +37,7 @@ export function ProductDetailContentSection({ p }: ProductDetailContentSectionPr
         <div>
           <h3>Check your venue layout</h3>
           <p>Use dimensions to plan table spacing and make sure wheelchair paths and accessible aisle clearance are allowed.</p>
-          <button>Download dimension guide</button>
+          <a href="/images/dimension-guide.png" download="dimension-guide.png" className="guide-download-btn">Download dimension guide</a>
         </div>
       </section>
       <section className="detail-split reverse" id="included">
@@ -93,7 +93,7 @@ export function ProductDetailContentSection({ p }: ProductDetailContentSectionPr
           <blockquote style={{ border: "none" }}>
             “The chairs arrived spotless and looked beautiful for our ceremony. Quantities and delivery timing were easy to confirm.”
             <footer>Verified wedding customer · Carlton North</footer>
-            <a>Read all 142 reviews</a>
+            <a href="#reviews" className="review-btn">Read all 142 reviews</a>
           </blockquote>
         </div>
       </section>

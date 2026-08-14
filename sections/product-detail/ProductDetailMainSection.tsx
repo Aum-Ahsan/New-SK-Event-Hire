@@ -80,11 +80,19 @@ export function ProductDetailMainSection({
         </div>
         <button className="main-product-image" onClick={() => setZoomed(!zoomed)} aria-label="Toggle product image zoom">
           <img src={selectedImage} alt={`${finish} ${size} ${p.name} with ${cushion} cushion`} />
-          <i className="cushion-preview" aria-hidden="true" />
+          {p.slug !== "natural-bentwood-chair" && (
+            <i className="cushion-preview" aria-hidden="true" />
+          )}
         </button>
         <div className="image-assurance">
           <span>◉ Product preview updates with colour, size and cushion</span>
-          <button onClick={() => setZoomed(!zoomed)}>⌕ {zoomed ? "Reset zoom" : "Zoom image"}</button>
+          <button onClick={() => setZoomed(!zoomed)} style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            {zoomed ? "Reset zoom" : "Zoom image"}
+          </button>
         </div>
       </div>
       <div className="product-copy">
@@ -96,6 +104,22 @@ export function ProductDetailMainSection({
           ★★★★★ <span>4.9 (142) · Write a review</span>
         </div>
         <p>{p.description}</p>
+        <section className="price-panel rental-breakdown">
+          <small>Estimated rental total</small>
+          <b>${total.toFixed(2)}</b>
+          <p>
+            {quantity} × ${unitDaily.toFixed(2)} per day × {rentalDays} day{rentalDays === 1 ? "" : "s"}
+          </p>
+          <hr />
+          <span>Selected combination <b>{[finish, size, cushion ? `${cushion} cushion` : ""].filter(Boolean).join(" · ") || "Base item"}</b></span>
+          <span>Hire subtotal <b>${hireSubtotal.toFixed(2)}</b></span>
+          <span>Refundable security bond <b>${bond.toFixed(2)}</b></span>
+          <span>GST (10%) <b>${gst.toFixed(2)}</b></span>
+          <span className="price-total">Total payable <b>${total.toFixed(2)}</b></span>
+          <em>Bond is $50 up to $300 hire value, $100 above $300, and $200 from $1,000. Final availability and delivery charges are confirmed during booking.</em>
+          <a href="/basket">Add to quote</a>
+          <a href="/create-quote-01">Book this product</a>
+        </section>
         <h3>Product colour</h3>
         <div className="swatch-buttons">
           {[
@@ -118,6 +142,7 @@ export function ProductDetailMainSection({
             </button>
           ))}
         </div>
+        {/*
         <h3>Seat cushion colour</h3>
         <div className="swatch-buttons cushions">
           {[
@@ -132,6 +157,7 @@ export function ProductDetailMainSection({
             </button>
           ))}
         </div>
+        */}
         <section className="booking-panel-detail">
           <h3>When do you need it?</h3>
           <p className="date-format-note">Enter dates in day / month / year order.</p>
@@ -139,7 +165,7 @@ export function ProductDetailMainSection({
             <label>
               Event / start date
               <input type="date" value={startDate} onChange={(e) => { setStartDate(e.target.value); setChecked(false); }} />
-              <small>{startDate.split("-").reverse().join(" / ")}</small>
+              <small>{startDate ? startDate.split("-").reverse().join(" / ") : "DD / MM / YYYY"}</small>
             </label>
             <label>
               Start time
@@ -148,7 +174,7 @@ export function ProductDetailMainSection({
             <label>
               Return date
               <input type="date" min={startDate} value={returnDate} onChange={(e) => { setReturnDate(e.target.value); setChecked(false); }} />
-              <small>{returnDate.split("-").reverse().join(" / ")}</small>
+              <small>{returnDate ? returnDate.split("-").reverse().join(" / ") : "DD / MM / YYYY"}</small>
             </label>
             <label>
               Return time
@@ -171,22 +197,6 @@ export function ProductDetailMainSection({
               ? `✓ ${quantity} available for ${startDate.split("-").reverse().join("/")}–${returnDate.split("-").reverse().join("/")}`
               : "Check availability"}
           </button>
-        </section>
-        <section className="price-panel rental-breakdown">
-          <small>Estimated rental total</small>
-          <b>${total.toFixed(2)}</b>
-          <p>
-            {quantity} × ${unitDaily.toFixed(2)} per day × {rentalDays} day{rentalDays === 1 ? "" : "s"}
-          </p>
-          <hr />
-          <span>Selected combination <b>{finish} · {size} · {cushion} cushion</b></span>
-          <span>Hire subtotal <b>${hireSubtotal.toFixed(2)}</b></span>
-          <span>Refundable security bond <b>${bond.toFixed(2)}</b></span>
-          <span>GST (10%) <b>${gst.toFixed(2)}</b></span>
-          <span className="price-total">Total payable <b>${total.toFixed(2)}</b></span>
-          <em>Bond is $50 up to $300 hire value, $100 above $300, and $200 from $1,000. Final availability and delivery charges are confirmed during booking.</em>
-          <a href="/basket">Add to quote</a>
-          <a href="/create-quote-01">Book this product</a>
         </section>
       </div>
     </section>

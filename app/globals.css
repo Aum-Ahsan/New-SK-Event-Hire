@@ -5228,7 +5228,9 @@ main {
   border: 0;
   outline: 0;
   flex: 1;
-  padding: 0 12px
+  padding: 0 12px;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .catalogue-search>span {
@@ -5781,7 +5783,7 @@ main {
   border-block: 1px solid #d9dee1;
   display: flex;
   gap: 30px;
-  padding: 0 max(20px, calc((100% - 1320px)/2));
+  padding: 0 max(20px, calc((100% - 980px)/2 + 20px));
   height: 58px;
   align-items: center
 }
@@ -5791,7 +5793,7 @@ main {
   font-weight: 800
 }
 
-.detail-tabs a:first-child {
+.detail-tabs a.active {
   color: var(--coral);
   height: 100%;
   display: grid;
@@ -5855,7 +5857,11 @@ main {
 }
 
 .layout-guide>div {
-  padding: 40px
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .layout-guide h3 {
@@ -5870,9 +5876,11 @@ main {
 .layout-guide button {
   background: #fff;
   border: 1px solid #0a2b49;
-  padding: 9px;
+  padding: 10px 18px;
   font-size: 12px;
-  font-weight: 900
+  font-weight: 900;
+  border-radius: 9px;
+  margin-top: 20px;
 }
 
 .detail-split {
@@ -5897,12 +5905,14 @@ main {
 .detail-split p {
   font-size: 12px;
   border-bottom: 1px solid #e0e4e5;
-  padding-bottom: 10px
+  padding-bottom: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .detail-split p b {
-  display: inline-block;
-  width: 105px
+  flex-shrink: 0;
+  width: 105px;
 }
 
 .safety-band {
@@ -5947,7 +5957,8 @@ main {
 .review-band>div:last-child {
   display: grid;
   grid-template-columns: 180px 1fr;
-  gap: 30px
+  gap: 30px;
+  align-items: center;
 }
 
 .review-band aside {
@@ -6155,13 +6166,7 @@ main {
     font-size: 15px
   }
 
-  .reference-product-grid footer {
-    grid-template-columns: 1fr
-  }
 
-  .reference-product-grid footer a:last-child {
-    display: none
-  }
 
   .catalogue-advice {
     grid-template-columns: 1fr
@@ -6248,7 +6253,11 @@ main {
   }
 
   .layout-guide>div {
-    padding: 25px
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .detail-split {
@@ -6407,7 +6416,8 @@ main {
   padding: 8px 10px;
   display: flex;
   flex-direction: column;
-  gap: 3px
+  gap: 3px;
+  min-width: 0;
 }
 
 .search-fields label span {
@@ -6425,7 +6435,10 @@ main {
   color: #102f48;
   font-weight: 750;
   font-size: 12px;
-  outline: 0
+  outline: 0;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .guests-field .guests-input-wrap {
@@ -8419,7 +8432,7 @@ main {
   padding: 0
 }
 
-.detail-tabs button:first-child {
+.detail-tabs button.active {
   color: var(--coral);
   border-bottom: 2px solid var(--coral)
 }
@@ -18016,6 +18029,8 @@ html {
   }
 
   .catalogue-planner .search-fields label:first-child,
+  .catalogue-planner .search-fields label:nth-child(2),
+  .catalogue-planner .search-fields label:nth-child(3),
   .catalogue-planner .search-fields button {
     grid-column: span 2
   }
@@ -23791,8 +23806,9 @@ html {
 /* Catalogue Product Card Price Section Styling - Grid View (Right Aligned Subtext) */
 .catalogue-price {
   display: flex !important;
-  justify-content: space-between !important;
-  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  gap: 6px !important;
+  align-items: baseline !important;
   width: 100% !important;
   margin-top: 10px !important;
   margin-bottom: 12px !important;
@@ -23932,4 +23948,138 @@ html {
   background: #091f36 !important;
   color: #ffffff !important;
   box-shadow: 0 1px 3px rgba(9, 31, 54, 0.2) !important;
+}
+
+@media (max-width: 700px) {
+  .reference-product-grid.list-view article {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reference-product-grid.list-view article>div {
+    padding: 14px !important;
+  }
+}
+
+.reference-product-grid-row {
+  display: contents;
+}
+
+@media (max-width: 1050px) {
+  .reference-product-grid:not(.list-view) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+
+  .reference-product-grid:not(.list-view) .reference-product-grid-row {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 16px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .reference-product-grid:not(.list-view) .reference-product-grid-row::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .reference-product-grid:not(.list-view) article {
+    width: 260px !important;
+    flex: 0 0 260px !important;
+    scroll-snap-align: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .reference-product-grid:not(.list-view) article {
+    width: 75vw !important;
+    flex: 0 0 75vw !important;
+  }
+
+  .reference-product-grid:not(.list-view) .product-image {
+    height: 220px !important;
+  }
+}
+
+/* Fix alignment for date inputs and select chevrons */
+.search-fields input[type="date"] {
+  padding: 0 !important;
+  line-height: 24px !important;
+}
+
+.search-fields input[type="date"]::-webkit-datetime-edit {
+  padding: 0 !important;
+  line-height: 24px !important;
+}
+
+.search-fields input[type="date"]::-webkit-calendar-picker-indicator {
+  margin: 0 !important;
+  padding: 0 !important;
+  align-self: center !important;
+}
+
+.search-fields select {
+  line-height: 24px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  background-position: right 0 center !important;
+}
+
+.hide-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbars {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.guide-download-btn {
+  height: 42px;
+  margin-top: 16px;
+  border: 1px solid var(--navy);
+  background: #fff;
+  border-radius: 7px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 14px;
+}
+.guide-download-btn:hover {
+  background: var(--bluebg);
+}
+
+.review-btn {
+  height: 42px;
+  margin-top: 16px;
+  border: 1px solid var(--navy);
+  background: #fff;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  color: var(--navy);
+  font-size: 14px;
+}
+.review-btn:hover {
+  background: var(--bluebg);
+}
+
+.recent-products > div.hide-scrollbars {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory;
+  gap: 16px !important;
+  padding-bottom: 14px;
+}
+
+.recent-products > div.hide-scrollbars > a {
+  flex: 0 0 min(330px, 80vw) !important;
+  scroll-snap-align: start;
 }
